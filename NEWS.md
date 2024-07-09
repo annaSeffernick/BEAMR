@@ -1,3 +1,5 @@
+# BEAMR 1.0.2
+
 # BEAMR 1.0.1
 
 # BEAMR 1.0.0
