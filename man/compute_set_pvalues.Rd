@@ -34,6 +34,6 @@ test.beam.stats <- compute_beam_stats(beam.data=test.beam.data,
                                       beam.specs=specs)
 test.pvals <- compute_set_pvalues(beam.stats=test.beam.stats)
 }
-data(beam_stats)
-test.pvals <- compute_set_pvalues(beam.stats=beam_stats)
+data(beam_stats_sm)
+test.pvals <- compute_set_pvalues(beam.stats=beam_stats_sm)
 }

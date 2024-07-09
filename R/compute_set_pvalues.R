@@ -24,8 +24,8 @@
 #'                                       beam.specs=specs)
 #' test.pvals <- compute_set_pvalues(beam.stats=test.beam.stats)
 #' }
-#' data(beam_stats)
-#' test.pvals <- compute_set_pvalues(beam.stats=beam_stats)
+#' data(beam_stats_sm)
+#' test.pvals <- compute_set_pvalues(beam.stats=beam_stats_sm)
 compute_set_pvalues=function(beam.stats, peel=F, z=T, alpha=0.1, mess.freq=25)
 {
   ######################################################
