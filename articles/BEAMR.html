@@ -176,22 +176,22 @@ resamples).</p>
 <code class="sourceCode R"><span><span class="va">beam.data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/prep_beam_data.html">prep_beam_data</a></span><span class="op">(</span>main.data<span class="op">=</span><span class="va">clinf</span>, mtx.data<span class="op">=</span><span class="va">omicdat</span>,</span>
 <span>                            mtx.anns<span class="op">=</span><span class="va">omicann</span>, set.data<span class="op">=</span><span class="va">setdat</span>,</span>
 <span>                            set.anns<span class="op">=</span><span class="cn">NULL</span>, n.boot<span class="op">=</span><span class="fl">10</span>, seed<span class="op">=</span><span class="fl">123</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Checking inputs: Tue Jul  9 17:56:59 2024</span></span>
-<span><span class="co">#&gt;   Checking that each element of mtx.data is a matrix: Tue Jul  9 17:56:59 2024</span></span>
-<span><span class="co">#&gt;   Checking that each element of mtx.anns is a data.frame: Tue Jul  9 17:56:59 2024</span></span>
-<span><span class="co">#&gt; Aligning main.data with each mtx.data: Tue Jul  9 17:56:59 2024</span></span>
-<span><span class="co">#&gt;   Working on mtx.data Lesion (1 of 2): Tue Jul  9 17:56:59 2024</span></span>
-<span><span class="co">#&gt;   Working on mtx.data RNA (2 of 2): Tue Jul  9 17:56:59 2024</span></span>
+<span><span class="co">#&gt; Checking inputs: Tue Jul  9 17:59:55 2024</span></span>
+<span><span class="co">#&gt;   Checking that each element of mtx.data is a matrix: Tue Jul  9 17:59:55 2024</span></span>
+<span><span class="co">#&gt;   Checking that each element of mtx.anns is a data.frame: Tue Jul  9 17:59:55 2024</span></span>
+<span><span class="co">#&gt; Aligning main.data with each mtx.data: Tue Jul  9 17:59:55 2024</span></span>
+<span><span class="co">#&gt;   Working on mtx.data Lesion (1 of 2): Tue Jul  9 17:59:55 2024</span></span>
+<span><span class="co">#&gt;   Working on mtx.data RNA (2 of 2): Tue Jul  9 17:59:55 2024</span></span>
 <span><span class="co">#&gt; Warning in get_id_index(main.data, mtx.clms): Some ids not matched; returning</span></span>
 <span><span class="co">#&gt; NAs for those.</span></span>
-<span><span class="co">#&gt;   Working on mtx.anns: Tue Jul  9 17:56:59 2024</span></span>
-<span><span class="co">#&gt;   Matching matrix 1 with annotations: Tue Jul  9 17:56:59 2024</span></span>
-<span><span class="co">#&gt;   Matching matrix 2 with annotations: Tue Jul  9 17:56:59 2024</span></span>
-<span><span class="co">#&gt;   Checking set.data: Tue Jul  9 17:56:59 2024</span></span>
-<span><span class="co">#&gt;     Ordering and indexing set.data: Tue Jul  9 17:56:59 2024</span></span>
-<span><span class="co">#&gt;     Checking section 1 of 40 of set.data: Tue Jul  9 17:56:59 2024</span></span>
-<span><span class="co">#&gt; Generating bootstrap index matrix: Tue Jul  9 17:56:59 2024</span></span>
-<span><span class="co">#&gt; Packaging and returning result: Tue Jul  9 17:56:59 2024</span></span></code></pre></div>
+<span><span class="co">#&gt;   Working on mtx.anns: Tue Jul  9 17:59:55 2024</span></span>
+<span><span class="co">#&gt;   Matching matrix 1 with annotations: Tue Jul  9 17:59:55 2024</span></span>
+<span><span class="co">#&gt;   Matching matrix 2 with annotations: Tue Jul  9 17:59:55 2024</span></span>
+<span><span class="co">#&gt;   Checking set.data: Tue Jul  9 17:59:55 2024</span></span>
+<span><span class="co">#&gt;     Ordering and indexing set.data: Tue Jul  9 17:59:55 2024</span></span>
+<span><span class="co">#&gt;     Checking section 1 of 40 of set.data: Tue Jul  9 17:59:55 2024</span></span>
+<span><span class="co">#&gt; Generating bootstrap index matrix: Tue Jul  9 17:59:55 2024</span></span>
+<span><span class="co">#&gt; Packaging and returning result: Tue Jul  9 17:59:55 2024</span></span></code></pre></div>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">beam.data</span></span>
 <span><span class="co">#&gt; main.data: 265 rows and 8 columns. </span></span>
@@ -303,24 +303,24 @@ parallelize by computing the statistics for the original data and each
 bootstrap dataset separately and then recombining.</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">beam.stats</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/compute_beam_stats.html">compute_beam_stats</a></span><span class="op">(</span>beam.data<span class="op">=</span><span class="va">beam.data</span>, beam.specs<span class="op">=</span><span class="va">beam.specs</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Working on analysis 1 of 6 : Tue Jul  9 17:56:59 2024</span></span>
-<span><span class="co">#&gt;   Working on bootstrap 0 of 11 : Tue Jul  9 17:56:59 2024</span></span>
-<span><span class="co">#&gt;   Working on bootstrap 10 of 11 : Tue Jul  9 17:56:59 2024</span></span>
-<span><span class="co">#&gt; Working on analysis 2 of 6 : Tue Jul  9 17:56:59 2024</span></span>
-<span><span class="co">#&gt;   Working on bootstrap 0 of 11 : Tue Jul  9 17:56:59 2024</span></span>
-<span><span class="co">#&gt;   Working on bootstrap 10 of 11 : Tue Jul  9 17:57:00 2024</span></span>
-<span><span class="co">#&gt; Working on analysis 3 of 6 : Tue Jul  9 17:57:00 2024</span></span>
-<span><span class="co">#&gt;   Working on bootstrap 0 of 11 : Tue Jul  9 17:57:00 2024</span></span>
-<span><span class="co">#&gt;   Working on bootstrap 10 of 11 : Tue Jul  9 17:57:14 2024</span></span>
-<span><span class="co">#&gt; Working on analysis 4 of 6 : Tue Jul  9 17:57:15 2024</span></span>
-<span><span class="co">#&gt;   Working on bootstrap 0 of 11 : Tue Jul  9 17:57:15 2024</span></span>
-<span><span class="co">#&gt;   Working on bootstrap 10 of 11 : Tue Jul  9 17:57:32 2024</span></span>
-<span><span class="co">#&gt; Working on analysis 5 of 6 : Tue Jul  9 17:57:33 2024</span></span>
-<span><span class="co">#&gt;   Working on bootstrap 0 of 11 : Tue Jul  9 17:57:33 2024</span></span>
-<span><span class="co">#&gt;   Working on bootstrap 10 of 11 : Tue Jul  9 17:57:48 2024</span></span>
-<span><span class="co">#&gt; Working on analysis 6 of 6 : Tue Jul  9 17:57:49 2024</span></span>
-<span><span class="co">#&gt;   Working on bootstrap 0 of 11 : Tue Jul  9 17:57:49 2024</span></span>
-<span><span class="co">#&gt;   Working on bootstrap 10 of 11 : Tue Jul  9 17:58:06 2024</span></span></code></pre></div>
+<span><span class="co">#&gt; Working on analysis 1 of 6 : Tue Jul  9 17:59:55 2024</span></span>
+<span><span class="co">#&gt;   Working on bootstrap 0 of 11 : Tue Jul  9 17:59:55 2024</span></span>
+<span><span class="co">#&gt;   Working on bootstrap 10 of 11 : Tue Jul  9 17:59:55 2024</span></span>
+<span><span class="co">#&gt; Working on analysis 2 of 6 : Tue Jul  9 17:59:55 2024</span></span>
+<span><span class="co">#&gt;   Working on bootstrap 0 of 11 : Tue Jul  9 17:59:55 2024</span></span>
+<span><span class="co">#&gt;   Working on bootstrap 10 of 11 : Tue Jul  9 17:59:55 2024</span></span>
+<span><span class="co">#&gt; Working on analysis 3 of 6 : Tue Jul  9 17:59:55 2024</span></span>
+<span><span class="co">#&gt;   Working on bootstrap 0 of 11 : Tue Jul  9 17:59:56 2024</span></span>
+<span><span class="co">#&gt;   Working on bootstrap 10 of 11 : Tue Jul  9 18:00:10 2024</span></span>
+<span><span class="co">#&gt; Working on analysis 4 of 6 : Tue Jul  9 18:00:12 2024</span></span>
+<span><span class="co">#&gt;   Working on bootstrap 0 of 11 : Tue Jul  9 18:00:12 2024</span></span>
+<span><span class="co">#&gt;   Working on bootstrap 10 of 11 : Tue Jul  9 18:00:29 2024</span></span>
+<span><span class="co">#&gt; Working on analysis 5 of 6 : Tue Jul  9 18:00:30 2024</span></span>
+<span><span class="co">#&gt;   Working on bootstrap 0 of 11 : Tue Jul  9 18:00:30 2024</span></span>
+<span><span class="co">#&gt;   Working on bootstrap 10 of 11 : Tue Jul  9 18:00:45 2024</span></span>
+<span><span class="co">#&gt; Working on analysis 6 of 6 : Tue Jul  9 18:00:46 2024</span></span>
+<span><span class="co">#&gt;   Working on bootstrap 0 of 11 : Tue Jul  9 18:00:46 2024</span></span>
+<span><span class="co">#&gt;   Working on bootstrap 10 of 11 : Tue Jul  9 18:01:04 2024</span></span></code></pre></div>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">beam.stats</span></span>
 <span><span class="co">#&gt; Contains 6 association estimate matrices with 10 bootstraps: </span></span>
@@ -499,27 +499,27 @@ integration of all available omics and endpoints. The result is a list,
 and the BEAMR p-values are in the “set.pvals” entry.</p>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">set.pvals</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/compute_set_pvalues.html">compute_set_pvalues</a></span><span class="op">(</span><span class="va">beam.stats</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Preparing bootstrap results for calculating feature set p-values: Tue Jul  9 17:58:08 2024</span></span>
-<span><span class="co">#&gt; Finding stats for each data matrix:Tue Jul  9 17:58:08 2024</span></span>
-<span><span class="co">#&gt;   Finding stats for data matrix Lesion: Tue Jul  9 17:58:08 2024</span></span>
-<span><span class="co">#&gt;    Finding features with with Lesion.MRD29 stats: Tue Jul  9 17:58:08 2024</span></span>
-<span><span class="co">#&gt;    Finding features with with Lesion.OS stats: Tue Jul  9 17:58:08 2024</span></span>
-<span><span class="co">#&gt;    Finding features with with Lesion.EFS stats: Tue Jul  9 17:58:08 2024</span></span>
-<span><span class="co">#&gt;   Finding stats for data matrix RNA: Tue Jul  9 17:58:08 2024</span></span>
-<span><span class="co">#&gt;    Finding features with with RNA.MRD29 stats: Tue Jul  9 17:58:08 2024</span></span>
-<span><span class="co">#&gt;    Finding features with with RNA.OS stats: Tue Jul  9 17:58:08 2024</span></span>
-<span><span class="co">#&gt;    Finding features with with RNA.EFS stats: Tue Jul  9 17:58:08 2024</span></span>
-<span><span class="co">#&gt; Found 120 rows of stats: Tue Jul  9 17:58:08 2024</span></span>
-<span><span class="co">#&gt; Merging stats with feature-sets: Tue Jul  9 17:58:08 2024</span></span>
+<span><span class="co">#&gt; Preparing bootstrap results for calculating feature set p-values: Tue Jul  9 18:01:06 2024</span></span>
+<span><span class="co">#&gt; Finding stats for each data matrix:Tue Jul  9 18:01:06 2024</span></span>
+<span><span class="co">#&gt;   Finding stats for data matrix Lesion: Tue Jul  9 18:01:06 2024</span></span>
+<span><span class="co">#&gt;    Finding features with with Lesion.MRD29 stats: Tue Jul  9 18:01:06 2024</span></span>
+<span><span class="co">#&gt;    Finding features with with Lesion.OS stats: Tue Jul  9 18:01:06 2024</span></span>
+<span><span class="co">#&gt;    Finding features with with Lesion.EFS stats: Tue Jul  9 18:01:06 2024</span></span>
+<span><span class="co">#&gt;   Finding stats for data matrix RNA: Tue Jul  9 18:01:06 2024</span></span>
+<span><span class="co">#&gt;    Finding features with with RNA.MRD29 stats: Tue Jul  9 18:01:06 2024</span></span>
+<span><span class="co">#&gt;    Finding features with with RNA.OS stats: Tue Jul  9 18:01:06 2024</span></span>
+<span><span class="co">#&gt;    Finding features with with RNA.EFS stats: Tue Jul  9 18:01:06 2024</span></span>
+<span><span class="co">#&gt; Found 120 rows of stats: Tue Jul  9 18:01:06 2024</span></span>
+<span><span class="co">#&gt; Merging stats with feature-sets: Tue Jul  9 18:01:06 2024</span></span>
 <span><span class="co">#&gt; Merged feature-set stat rows: 120</span></span>
-<span><span class="co">#&gt; Ordering and indexing feature sets: Tue Jul  9 17:58:08 2024</span></span>
-<span><span class="co">#&gt;   Cleaning up beam.stat matrices:Tue Jul  9 17:58:08 2024</span></span>
-<span><span class="co">#&gt;    Working on matrix 1 of 6: Tue Jul  9 17:58:08 2024</span></span>
-<span><span class="co">#&gt;    Working on matrix 2 of 6: Tue Jul  9 17:58:08 2024</span></span>
-<span><span class="co">#&gt;    Working on matrix 3 of 6: Tue Jul  9 17:58:08 2024</span></span>
-<span><span class="co">#&gt;    Working on matrix 4 of 6: Tue Jul  9 17:58:08 2024</span></span>
-<span><span class="co">#&gt;    Working on matrix 5 of 6: Tue Jul  9 17:58:08 2024</span></span>
-<span><span class="co">#&gt;    Working on matrix 6 of 6: Tue Jul  9 17:58:08 2024</span></span>
+<span><span class="co">#&gt; Ordering and indexing feature sets: Tue Jul  9 18:01:06 2024</span></span>
+<span><span class="co">#&gt;   Cleaning up beam.stat matrices:Tue Jul  9 18:01:06 2024</span></span>
+<span><span class="co">#&gt;    Working on matrix 1 of 6: Tue Jul  9 18:01:06 2024</span></span>
+<span><span class="co">#&gt;    Working on matrix 2 of 6: Tue Jul  9 18:01:06 2024</span></span>
+<span><span class="co">#&gt;    Working on matrix 3 of 6: Tue Jul  9 18:01:06 2024</span></span>
+<span><span class="co">#&gt;    Working on matrix 4 of 6: Tue Jul  9 18:01:06 2024</span></span>
+<span><span class="co">#&gt;    Working on matrix 5 of 6: Tue Jul  9 18:01:06 2024</span></span>
+<span><span class="co">#&gt;    Working on matrix 6 of 6: Tue Jul  9 18:01:06 2024</span></span>
 <span><span class="co">#&gt;   row.start row.end          set.id</span></span>
 <span><span class="co">#&gt; 1         1       3 ENSG00000081760</span></span>
 <span><span class="co">#&gt; 2         4       6 ENSG00000094914</span></span>
@@ -541,11 +541,11 @@ and the BEAMR p-values are in the “set.pvals” entry.</p>
 <span><span class="co">#&gt; 66 RNA_ENSG00000094914 ENSG00000094914   RNA.EFS ENSG00000094914</span></span>
 <span><span class="co">#&gt; 64 RNA_ENSG00000094914 ENSG00000094914 RNA.MRD29 ENSG00000094914</span></span>
 <span><span class="co">#&gt; 65 RNA_ENSG00000094914 ENSG00000094914    RNA.OS ENSG00000094914</span></span>
-<span><span class="co">#&gt; Computing p-value for feature set 1 of 34: Tue Jul  9 17:58:08 2024</span></span>
+<span><span class="co">#&gt; Computing p-value for feature set 1 of 34: Tue Jul  9 18:01:06 2024</span></span>
 <span><span class="co">#&gt; 13ENSG00000081760</span></span>
-<span><span class="co">#&gt; Computing p-value for feature set 26 of 34: Tue Jul  9 17:58:08 2024</span></span>
+<span><span class="co">#&gt; Computing p-value for feature set 26 of 34: Tue Jul  9 18:01:06 2024</span></span>
 <span><span class="co">#&gt; 9496ENSG00000229835</span></span>
-<span><span class="co">#&gt; Finished computing p-values at: Tue Jul  9 17:58:08 2024</span></span>
+<span><span class="co">#&gt; Finished computing p-values at: Tue Jul  9 18:01:06 2024</span></span>
 <span><span class="co">#&gt; Minimum q-value is 0.106439437831269</span></span>
 <span><span class="co">#&gt; Creating set p-value data frame.</span></span>
 <span><span class="co">#&gt; Done creating data frame.</span></span>
@@ -579,17 +579,17 @@ for each omics/endpoint pair with univariate associations for all omics
 features.</p>
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">feat.pvals</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/compute_feature_pvalues.html">compute_feature_pvalues</a></span><span class="op">(</span><span class="va">beam.stats</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Computing feature p-values for stat matrix 1 of 6: Tue Jul  9 17:58:08 2024</span></span>
+<span><span class="co">#&gt; Computing feature p-values for stat matrix 1 of 6: Tue Jul  9 18:01:06 2024</span></span>
 <span><span class="co">#&gt;   This matrix has 20 features.</span></span>
-<span><span class="co">#&gt; Computing feature p-values for stat matrix 2 of 6: Tue Jul  9 17:58:08 2024</span></span>
+<span><span class="co">#&gt; Computing feature p-values for stat matrix 2 of 6: Tue Jul  9 18:01:06 2024</span></span>
 <span><span class="co">#&gt;   This matrix has 20 features.</span></span>
-<span><span class="co">#&gt; Computing feature p-values for stat matrix 3 of 6: Tue Jul  9 17:58:08 2024</span></span>
+<span><span class="co">#&gt; Computing feature p-values for stat matrix 3 of 6: Tue Jul  9 18:01:06 2024</span></span>
 <span><span class="co">#&gt;   This matrix has 20 features.</span></span>
-<span><span class="co">#&gt; Computing feature p-values for stat matrix 4 of 6: Tue Jul  9 17:58:08 2024</span></span>
+<span><span class="co">#&gt; Computing feature p-values for stat matrix 4 of 6: Tue Jul  9 18:01:06 2024</span></span>
 <span><span class="co">#&gt;   This matrix has 20 features.</span></span>
-<span><span class="co">#&gt; Computing feature p-values for stat matrix 5 of 6: Tue Jul  9 17:58:08 2024</span></span>
+<span><span class="co">#&gt; Computing feature p-values for stat matrix 5 of 6: Tue Jul  9 18:01:06 2024</span></span>
 <span><span class="co">#&gt;   This matrix has 20 features.</span></span>
-<span><span class="co">#&gt; Computing feature p-values for stat matrix 6 of 6: Tue Jul  9 17:58:08 2024</span></span>
+<span><span class="co">#&gt; Computing feature p-values for stat matrix 6 of 6: Tue Jul  9 18:01:06 2024</span></span>
 <span><span class="co">#&gt;   This matrix has 20 features.</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">feat.pvals</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] "Lesion.MRD29" "RNA.MRD29"    "Lesion.OS"    "RNA.OS"       "Lesion.EFS"  </span></span>
@@ -623,32 +623,32 @@ q-values.</p>
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">beam.stats.filt</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/subset_beam_result.html">subset_beam_result</a></span><span class="op">(</span><span class="va">beam.stats</span>, <span class="va">set.pvals</span>, <span class="va">feat.pvals</span>, endpts<span class="op">=</span><span class="cn">NULL</span>,</span>
 <span>                                      q.limit<span class="op">=</span><span class="fl">10</span>, intersect<span class="op">=</span><span class="cn">TRUE</span>, recalc<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span></span>
-<span><span class="co">#&gt;   Working on mtx.anns: Tue Jul  9 17:58:08 2024</span></span>
-<span><span class="co">#&gt;   Matching matrix 1 with annotations: Tue Jul  9 17:58:08 2024</span></span>
-<span><span class="co">#&gt;   Matching matrix 2 with annotations: Tue Jul  9 17:58:08 2024</span></span>
-<span><span class="co">#&gt; Computing feature p-values for stat matrix 1 of 6: Tue Jul  9 17:58:08 2024</span></span>
+<span><span class="co">#&gt;   Working on mtx.anns: Tue Jul  9 18:01:06 2024</span></span>
+<span><span class="co">#&gt;   Matching matrix 1 with annotations: Tue Jul  9 18:01:06 2024</span></span>
+<span><span class="co">#&gt;   Matching matrix 2 with annotations: Tue Jul  9 18:01:06 2024</span></span>
+<span><span class="co">#&gt; Computing feature p-values for stat matrix 1 of 6: Tue Jul  9 18:01:06 2024</span></span>
 <span><span class="co">#&gt;   This matrix has 6 features.</span></span>
-<span><span class="co">#&gt; Computing feature p-values for stat matrix 2 of 6: Tue Jul  9 17:58:08 2024</span></span>
+<span><span class="co">#&gt; Computing feature p-values for stat matrix 2 of 6: Tue Jul  9 18:01:06 2024</span></span>
 <span><span class="co">#&gt;   This matrix has 7 features.</span></span>
-<span><span class="co">#&gt; Computing feature p-values for stat matrix 3 of 6: Tue Jul  9 17:58:08 2024</span></span>
+<span><span class="co">#&gt; Computing feature p-values for stat matrix 3 of 6: Tue Jul  9 18:01:06 2024</span></span>
 <span><span class="co">#&gt;   This matrix has 6 features.</span></span>
-<span><span class="co">#&gt; Computing feature p-values for stat matrix 4 of 6: Tue Jul  9 17:58:08 2024</span></span>
+<span><span class="co">#&gt; Computing feature p-values for stat matrix 4 of 6: Tue Jul  9 18:01:06 2024</span></span>
 <span><span class="co">#&gt;   This matrix has 7 features.</span></span>
-<span><span class="co">#&gt; Computing feature p-values for stat matrix 5 of 6: Tue Jul  9 17:58:08 2024</span></span>
+<span><span class="co">#&gt; Computing feature p-values for stat matrix 5 of 6: Tue Jul  9 18:01:06 2024</span></span>
 <span><span class="co">#&gt;   This matrix has 6 features.</span></span>
-<span><span class="co">#&gt; Computing feature p-values for stat matrix 6 of 6: Tue Jul  9 17:58:08 2024</span></span>
+<span><span class="co">#&gt; Computing feature p-values for stat matrix 6 of 6: Tue Jul  9 18:01:06 2024</span></span>
 <span><span class="co">#&gt;   This matrix has 7 features.</span></span>
-<span><span class="co">#&gt; Computing feature p-values for stat matrix 1 of 6: Tue Jul  9 17:58:08 2024</span></span>
+<span><span class="co">#&gt; Computing feature p-values for stat matrix 1 of 6: Tue Jul  9 18:01:06 2024</span></span>
 <span><span class="co">#&gt;   This matrix has 6 features.</span></span>
-<span><span class="co">#&gt; Computing feature p-values for stat matrix 2 of 6: Tue Jul  9 17:58:08 2024</span></span>
+<span><span class="co">#&gt; Computing feature p-values for stat matrix 2 of 6: Tue Jul  9 18:01:06 2024</span></span>
 <span><span class="co">#&gt;   This matrix has 7 features.</span></span>
-<span><span class="co">#&gt; Computing feature p-values for stat matrix 3 of 6: Tue Jul  9 17:58:08 2024</span></span>
+<span><span class="co">#&gt; Computing feature p-values for stat matrix 3 of 6: Tue Jul  9 18:01:06 2024</span></span>
 <span><span class="co">#&gt;   This matrix has 6 features.</span></span>
-<span><span class="co">#&gt; Computing feature p-values for stat matrix 4 of 6: Tue Jul  9 17:58:08 2024</span></span>
+<span><span class="co">#&gt; Computing feature p-values for stat matrix 4 of 6: Tue Jul  9 18:01:06 2024</span></span>
 <span><span class="co">#&gt;   This matrix has 7 features.</span></span>
-<span><span class="co">#&gt; Computing feature p-values for stat matrix 5 of 6: Tue Jul  9 17:58:08 2024</span></span>
+<span><span class="co">#&gt; Computing feature p-values for stat matrix 5 of 6: Tue Jul  9 18:01:06 2024</span></span>
 <span><span class="co">#&gt;   This matrix has 6 features.</span></span>
-<span><span class="co">#&gt; Computing feature p-values for stat matrix 6 of 6: Tue Jul  9 17:58:08 2024</span></span>
+<span><span class="co">#&gt; Computing feature p-values for stat matrix 6 of 6: Tue Jul  9 18:01:06 2024</span></span>
 <span><span class="co">#&gt;   This matrix has 7 features.</span></span></code></pre></div>
 <div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">beam.stats.filt</span></span>
