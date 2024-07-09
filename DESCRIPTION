@@ -1,6 +1,5 @@
 Package: BEAMR
-Title: Bootstrap Evaluation of Association Matrices in R for Integrated
-    Multi-omics, Multi-outcome Analysis
+Title: Bootstrap Evaluation of Association Matrices in R
 Version: 0.0.0.9000
 Authors@R: c(
     person("Anna Eames", "Seffernick", , "anna.seffernick@stjude.org", role = c("aut", "cre", "cph"),
