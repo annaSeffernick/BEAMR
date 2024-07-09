@@ -82,7 +82,7 @@ usethis::use_data(beam_stats, overwrite = TRUE)
 beam_dat_sm <- prep_beam_data(main.data=clinf, mtx.data=omicdat,
                            mtx.anns=omicann, set.data=setdat,
                            set.anns=NULL, n.boot=2, seed=123)
-beam_specs_sm <- prep_beam_specs(beam.data=beam_dat, endpts=c("MRD29", "EFS"),
+beam_specs_sm <- prep_beam_specs(beam.data=beam_dat, endpts=c("MRD29"),
                               firth=TRUE)
 beam_stats_sm <- compute_beam_stats(beam.data=beam_dat_sm, beam.specs=beam_specs_sm)
 

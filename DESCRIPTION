@@ -9,7 +9,7 @@ Authors@R: c(
   )
 Maintainer: Anna Eames Seffernick <anna.seffernick@stjude.org>
 Description: A bootstrap-based approach to integrate multiple forms of
-    high dimensional genomic data with multiple clinical endpoints.  BEAMR
+    high dimensional genomic data with multiple clinical endpoints.  This method
     is used to find clinically meaningful groups of genomic features, such
     as genes or pathways.
 License: GPL (>= 3)
