@@ -34,8 +34,8 @@ specs <- prep_beam_specs(beam.data=test.beam.data,
 test.beam.stats <- compute_beam_stats(beam.data=test.beam.data,
                                       beam.specs=specs, stdize=TRUE)
 }
-data(beam_dat)
-data(beam_specs)
-test.beam.stats <- compute_beam_stats(beam.data=beam_dat,
-                                      beam.specs=beam_specs, stdize=TRUE)
+data(beam_dat_sm)
+data(beam_specs_sm)
+test.beam.stats <- compute_beam_stats(beam.data=beam_dat_sm,
+                                      beam.specs=beam_specs_sm, stdize=TRUE)
 }

@@ -20,6 +20,7 @@
 #' @importFrom dplyr inner_join
 #' @importFrom dplyr full_join
 #' @importFrom purrr reduce
+#' @importFrom magrittr %>%
 #' @export
 #'
 #' @examples
