@@ -34,4 +34,5 @@ Suggests:
 Depends: 
     R (>= 2.10)
 LazyData: true
-URL: https://annaseffernick.github.io/BEAMR/
+URL: https://annaseffernick.github.io/BEAMR/, https://github.com/annaSeffernick/BEAMR
+BugReports: https://github.com/annaSeffernick/BEAMR/issues
