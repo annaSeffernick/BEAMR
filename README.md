@@ -6,7 +6,8 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of BEAMR is to identify genes that have multiple genomic
+The BEAMR package implements the Bootstrap Evaluation of Association
+Matrices (BEAM) method to identify genes that have multiple genomic
 features associated with multiple clinical endpoints. It uses simple
 association models and bootstraping to integrate multiple genomic
 features.
