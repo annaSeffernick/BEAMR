@@ -7,6 +7,7 @@ Authors@R: c(
     person("Stanley", "Pounds", , "stanley.pounds@stjude.org", role = "aut"),
     person("Xueyuan", "Cao", , "xcao12@uthsc.edu", role = "aut")
   )
+Maintainer: Anna Eames Seffernick <anna.seffernick@stjude.org>
 Description: A bootstrap-based approach to integrate multiple forms of
     high dimensional genomic data with multiple clinical endpoints.  BEAMR
     is used to find clinically meaningful groups of genomic features, such
