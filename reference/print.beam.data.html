@@ -138,7 +138,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> [3,]  108    8  114  261   29</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [4,]   55   19  241  218  155</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [5,]  145  200  211   69   46</span>
-<span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
+<span class="r-in"><span><span class="co"># \donttest{</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">clinf</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">omicdat</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">omicann</span><span class="op">)</span></span></span>
@@ -146,8 +146,96 @@
 <span class="r-in"><span><span class="va">test.beam.data</span> <span class="op">&lt;-</span> <span class="fu"><a href="prep_beam_data.html">prep_beam_data</a></span><span class="op">(</span>main.data<span class="op">=</span><span class="va">clinf</span>, mtx.data<span class="op">=</span><span class="va">omicdat</span>,</span></span>
 <span class="r-in"><span>                                 mtx.anns<span class="op">=</span><span class="va">omicann</span>, set.data<span class="op">=</span><span class="va">setdat</span>,</span></span>
 <span class="r-in"><span>                                 set.anns<span class="op">=</span><span class="cn">NULL</span>, n.boot<span class="op">=</span><span class="fl">10</span>, seed<span class="op">=</span><span class="fl">123</span><span class="op">)</span></span></span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Checking inputs: Fri Jul 12 15:29:47 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Checking that each element of mtx.data is a matrix: Fri Jul 12 15:29:47 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Checking that each element of mtx.anns is a data.frame: Fri Jul 12 15:29:47 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Aligning main.data with each mtx.data: Fri Jul 12 15:29:47 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on mtx.data Lesion (1 of 2): Fri Jul 12 15:29:47 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on mtx.data RNA (2 of 2): Fri Jul 12 15:29:47 2024</span>
+<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Some ids not matched; returning NAs for those.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on mtx.anns: Fri Jul 12 15:29:47 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Matching matrix 1 with annotations: Fri Jul 12 15:29:47 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Matching matrix 2 with annotations: Fri Jul 12 15:29:47 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Checking set.data: Fri Jul 12 15:29:47 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>     Ordering and indexing set.data: Fri Jul 12 15:29:47 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>     Checking section 1 of 40 of set.data: Fri Jul 12 15:29:47 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Generating bootstrap index matrix: Fri Jul 12 15:29:47 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Packaging and returning result: Fri Jul 12 15:29:47 2024</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">test.beam.data</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> main.data: 265 rows and 8 columns. </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            ID MRD29 RNA.clm Lesion.clm Lesion.id</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> PARASZ PARASZ  0.00      46         21    PARASZ</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> PARAYM PARAYM  0.00      47        108    PARAYM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> PARCVM PARCVM  0.00      15         84    PARCVM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> PAREGZ PAREGZ  0.49     170        142    PAREGZ</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> PARFDL PARFDL  0.00     184        175    PARFDL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> mtx.data: </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   mtx.data Lesion: 265 columns linked to 265 rows of main.data. </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   mtx.data RNA: 264 columns linked to 264 rows of main.data. </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Lesion: </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                          PARWNW PASXUC PATXNR PASYIS PATBGC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ENSG00000264545_loss          1      1      1      1      0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ENSG00000147889_loss          1      1      1      1      0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ENSG00000224854_loss          1      1      1      1      0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ENSG00000148400_mutation      1      1      1      1      0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ENSG00000099810_loss          1      1      1      1      0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> RNA: </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                    PARFIH     PARFPJ     PARFXJ     PARKLK     PARLJA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ENSG00000121410 0.4976379 0.29994795 1.13973142 0.32584690 0.35940872</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ENSG00000148584 0.0000000 0.00000000 0.00000000 0.00000000 0.00000000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ENSG00000175899 0.0176369 0.11316706 0.02913480 0.00992041 0.02672925</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ENSG00000166535 0.0000000 0.02261638 0.01278318 0.01735184 0.00000000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ENSG00000184389 0.1067503 1.46126661 0.32734246 0.56042150 0.49385225</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> mtx.anns: </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   Lesion: 20 rows and 2 columns. </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   RNA: 20 rows and 2 columns. </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Lesion: </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                         id            gene</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1     ENSG00000264545_loss ENSG00000264545</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2     ENSG00000147889_loss ENSG00000147889</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3     ENSG00000224854_loss ENSG00000224854</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 ENSG00000148400_mutation ENSG00000148400</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5     ENSG00000099810_loss ENSG00000099810</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> RNA: </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                id            gene</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 ENSG00000121410 ENSG00000121410</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 ENSG00000148584 ENSG00000148584</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 ENSG00000175899 ENSG00000175899</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 ENSG00000166535 ENSG00000166535</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5 ENSG00000184389 ENSG00000184389</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> anns.mtch: </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   mtx.data mtx.anns id.clm nrow.mtx nrow.ann nrow.map</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1   Lesion   Lesion     id       20       20       20</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2      RNA      RNA     id       20       20       20</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> set.data: 40 rows assigning sets to data.mtx rows. </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>             set.id mtx.id               row.id</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9  ENSG00000081760    RNA      ENSG00000081760</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8  ENSG00000094914    RNA      ENSG00000094914</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25 ENSG00000099810 Lesion ENSG00000099810_loss</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19 ENSG00000099810    RNA      ENSG00000099810</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14 ENSG00000109576    RNA      ENSG00000109576</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10 ENSG00000114771    RNA      ENSG00000114771</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> set.anns:  rows of set annotations.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> boot.index: 11 rows and 265 columns of bootstrap indices. </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    1    2    3    4    5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]  179   14  195  118  229</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]  108    8  114  261   29</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]   55   19  241  218  155</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]  145  200  211   69   46</span>
+<span class="r-in"><span><span class="co"># }</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
