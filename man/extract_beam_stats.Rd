@@ -18,7 +18,7 @@ A matrix with with estimated associations for each endpoint and each omic featur
 Extract beam stats for a specific set
 }
 \examples{
-\dontrun{
+\donttest{
 test.beam.data <- prep_beam_data(main.data=clinf, mtx.data=omicdat,
                                  mtx.anns=omicann, set.data=setdat,
                                  set.anns=NULL, n.boot=10, seed=123)

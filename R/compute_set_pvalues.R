@@ -14,7 +14,7 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' test.beam.data <- prep_beam_data(main.data=clinf, mtx.data=omicdat,
 #'                                  mtx.anns=omicann, set.data=setdat,
 #'                                  set.anns=NULL, n.boot=10, seed=123)
@@ -26,7 +26,7 @@
 #' }
 #' data(beam_stats_sm)
 #' test.pvals <- compute_set_pvalues(beam.stats=beam_stats_sm)
-compute_set_pvalues=function(beam.stats, peel=F, z=T, alpha=0.1, mess.freq=25)
+compute_set_pvalues=function(beam.stats, peel=FALSE, z=TRUE, alpha=0.1, mess.freq=25)
 {
   ######################################################
   # Identify the matrices with analyses specified
@@ -138,7 +138,7 @@ compute_set_pvalues=function(beam.stats, peel=F, z=T, alpha=0.1, mess.freq=25)
   #
   # message(paste0("  Merging feature-level bootstrap summaries with set definitions: ",date()))
   # set.mtch$stat.row=paste0(set.mtch$stat.id,"_",set.mtch$row.id)
-  # smry.mtx=merge(set.mtch,smry.mtx,by.x="stat.row",by.y="rownames",all=T)
+  # smry.mtx=merge(set.mtch,smry.mtx,by.x="stat.row",by.y="rownames",all=TRUE)
 
   print(head(set.index))
   print(head(set.stat.index))
@@ -194,7 +194,7 @@ compute_set_pvalues=function(beam.stats, peel=F, z=T, alpha=0.1, mess.freq=25)
     distance.ratio[i] <- res.list$dist.to.null/res.list$mean.from.obs
   }
   message(paste0("Finished computing p-values at: ",date()))
-  pi0.hat=min(1,2*mean(p.set,na.rm=T))
+  pi0.hat=min(1,2*mean(p.set,na.rm=TRUE))
   q.set=pi0.hat*stats::p.adjust(p.set,method="fdr")
   message(paste0("Minimum q-value is ", min(q.set)))
 
@@ -212,7 +212,7 @@ compute_set_pvalues=function(beam.stats, peel=F, z=T, alpha=0.1, mess.freq=25)
   if (!is.null(set.anns))
   {
     ann.pvals=merge(set.anns,set.pvals,
-                    by="set.id",all=T)
+                    by="set.id",all=TRUE)
     set.pvals=ann.pvals
   }
 
@@ -226,8 +226,8 @@ compute_set_pvalues=function(beam.stats, peel=F, z=T, alpha=0.1, mess.freq=25)
 
 
 beam.pvalue=function(B.mtx,     # bootstrap matrix with observed result in row 1
-                     peel=F,    # indicates whether or not to peel
-                     z=T,       # indicates whether z-scale each vector of one coefficient estimate across bootstraps before analysis
+                     peel=FALSE,    # indicates whether or not to peel
+                     z=TRUE,       # indicates whether z-scale each vector of one coefficient estimate across bootstraps before analysis
                      alpha=0.1) # maximum depth to peel (reduce computing time)
 
 {
@@ -245,8 +245,8 @@ beam.pvalue=function(B.mtx,     # bootstrap matrix with observed result in row 1
       if(col.sd[i]!=0){B.mtx.scale[,i] <- (B.mtx[,i]-cent[i])/f(B.mtx[,i]-cent[i])}
     }
     pca.res=stats::prcomp(B.mtx.scale,
-                          center=F,
-                          scale.=F)
+                          center=FALSE,
+                          scale.=FALSE)
   }
   else{
     pca.res=stats::prcomp(B.mtx,                      # principal components for all bootstraps
@@ -271,7 +271,7 @@ beam.pvalue=function(B.mtx,     # bootstrap matrix with observed result in row 1
     p=0                                      # initialize p-value
     indx=1:b                                 # index of bootstraps
     drop.indx=NULL                           # index of those farther from center than null
-    cont=T                                   # initialize indicator on whether to continue looping
+    cont=TRUE                                   # initialize indicator on whether to continue looping
 
     while(cont)                         # loop over iterative peeling
     {
@@ -296,8 +296,8 @@ beam.pvalue=function(B.mtx,     # bootstrap matrix with observed result in row 1
             if(col.sd[i]!=0){B.mtx.scale[,i] <- (B.mtx[,i]-cent[i])/f(B.mtx[,i]-cent[i])}
           }
           pca.res=stats::prcomp(B.mtx.scale,
-                                center=F,
-                                scale.=F)
+                                center=FALSE,
+                                scale.=FALSE)
         }
         else{
           pca.res=stats::prcomp(B.mtx,                      # principal components for all bootstraps

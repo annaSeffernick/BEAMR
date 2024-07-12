@@ -42,7 +42,7 @@ A list of plots for the specified set and/or feature.
 Internal function: generate a list of clinical feature plots.
 }
 \examples{
-\dontrun{
+\donttest{
 test.beam.data <- prep_beam_data(main.data=clinf, mtx.data=omicdat,
                                  mtx.anns=omicann, set.data=setdat,
                                  set.anns=NULL, n.boot=10, seed=123)

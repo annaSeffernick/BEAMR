@@ -1,5 +1,5 @@
 Package: BEAMR
-Title: Bootstrap Evaluation of Association Matrices in R
+Title: Bootstrap Evaluation of Association Matrices
 Version: 1.0.2
 Authors@R: c(
     person("Anna Eames", "Seffernick", , "anna.seffernick@stjude.org", role = c("aut", "cre", "cph"),
@@ -10,7 +10,7 @@ Authors@R: c(
 Description: A bootstrap-based approach to integrate multiple forms of
     high dimensional genomic data with multiple clinical endpoints.  This method
     is used to find clinically meaningful groups of genomic features, such
-    as genes or pathways.
+    as genes or pathways. A manuscript describing this method is in preparation. 
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

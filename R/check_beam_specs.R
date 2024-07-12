@@ -7,7 +7,7 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' data(clinf)
 #' data(omicdat)
 #' data(omicann)
@@ -27,7 +27,7 @@ check_beam_specs=function(beam.specs,mtx.names)
   if (any(!is.element(beam.specs[,"mtx"],mtx.names)))
     stop("Each mtx in beam.specs must be in names(beam.data$mtx.data).")
 
-  mtx.row=grepl("mtx.row",beam.specs[,"mdl"],fixed=T)
+  mtx.row=grepl("mtx.row",beam.specs[,"mdl"],fixed=TRUE)
   if (any(!mtx.row))
     stop("Each model string must include mtx.row in the formula.")
 

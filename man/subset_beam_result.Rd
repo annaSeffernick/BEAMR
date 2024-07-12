@@ -54,7 +54,7 @@ A list with filtered beam.stats object, updated beam.set.pvals, and filtered bea
 Filter the beam.stats object from compute_beam_stats with various filtering criteria. Default is to filter to top 50 sets with smallest q-value. At least one filtering criteria must be specified. Can also use intersection or union of multiple criteria.
 }
 \examples{
-\dontrun{
+\donttest{
 test.beam.data <- prep_beam_data(main.data=clinf, mtx.data=omicdat,
                                  mtx.anns=omicann, set.data=setdat,
                                  set.anns=NULL, n.boot=10, seed=123)

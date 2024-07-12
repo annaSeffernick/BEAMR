@@ -16,7 +16,7 @@ Matrix of cleaned bootstrap coefficients
 Clean up bootstrap coefficient matrix
 }
 \examples{
-\dontrun{
+\donttest{
 data(clinf)
 data(omicdat)
 data(omicann)

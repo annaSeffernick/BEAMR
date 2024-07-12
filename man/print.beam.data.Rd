@@ -20,7 +20,7 @@ Print summary information about a beam.data object
 \examples{
 data(beam_dat)
 print(beam_dat)
-\dontrun{
+\donttest{
 data(clinf)
 data(omicdat)
 data(omicann)

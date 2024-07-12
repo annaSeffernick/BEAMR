@@ -100,7 +100,7 @@ prep_beam_data=function(main.data,
       n.mtch=rep(NA,n.anns)
       for (j in 1:n.anns)
       {
-        best.mtch=get_id_index(mtx.anns[[j]],mtx.rows,warn=F)
+        best.mtch=get_id_index(mtx.anns[[j]],mtx.rows,warn=FALSE)
         n.mtch[j]=sum(!is.na(best.mtch))
       }
       if (any(n.mtch)>0)
@@ -191,7 +191,7 @@ prep_beam_data=function(main.data,
   n=nrow(main.data)
   set.seed(seed)
   n.subj=nrow(main.data)
-  boot.index=replicate(n.boot,sample(n,replace=T))
+  boot.index=replicate(n.boot,sample(n,replace=TRUE))
   boot.index=t(boot.index)
   boot.index=rbind(1:n,boot.index)
 

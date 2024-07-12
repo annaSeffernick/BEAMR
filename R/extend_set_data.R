@@ -12,7 +12,7 @@
 extend_set_data=function(set.data,sep)
 
 {
-  set.id=strsplit(set.data$set.id,split=sep,fixed=T)
+  set.id=strsplit(set.data$set.id,split=sep,fixed=TRUE)
   set.id=lapply(set.id,unique)
   k=lapply(set.id,length)
   k=unlist(k)

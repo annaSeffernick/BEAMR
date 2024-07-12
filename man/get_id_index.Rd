@@ -4,7 +4,7 @@
 \alias{get_id_index}
 \title{For each row of the data.frame main.data, find the index of the matching element in vector ids}
 \usage{
-get_id_index(mtch.data, ids, warn = T)
+get_id_index(mtch.data, ids, warn = TRUE)
 }
 \arguments{
 \item{mtch.data}{A data.frame to be linked with the ids}

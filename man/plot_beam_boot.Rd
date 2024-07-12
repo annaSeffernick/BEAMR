@@ -33,7 +33,7 @@ A pairs plot figure.
 #' plot_beam_boot produces a pairs plot of the beam stats matrices. Default is maximum of 5 plots, ordered by most significant association direction.
 }
 \examples{
-\dontrun{
+\donttest{
 test.beam.data <- prep_beam_data(main.data=clinf, mtx.data=omicdat,
                                  mtx.anns=omicann, set.data=setdat,
                                  set.anns=NULL, n.boot=10, seed=123)

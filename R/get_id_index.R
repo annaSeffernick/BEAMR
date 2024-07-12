@@ -14,7 +14,7 @@
 #' id_index <- get_id_index(clinf,mtx.clms)
 get_id_index=function(mtch.data,
                       ids,       #
-                      warn=T)
+                      warn=TRUE)
 
 {
   if (any(duplicated(ids)))
@@ -38,7 +38,7 @@ get_id_index=function(mtch.data,
   # reduce length of ids to compare if very long
   id.mtch.index=(1:length(ids))
   if (length(id.mtch.index)>1000)
-    id.mtch.index=sample(length(ids),1000,replace=F)
+    id.mtch.index=sample(length(ids),1000,replace=FALSE)
 
   #mtch.mtx=as.data.frame(t(apply(mtch.data,2,
   #                               is.element,ids[id.mtch.index]))) # check each column of mtch.data for matches
@@ -62,7 +62,7 @@ get_id_index=function(mtch.data,
 
   id.mtch=base::merge(mtch.id,id.index,
                       by="id",
-                      all.x=T,all.y=F)
+                      all.x=TRUE,all.y=FALSE)
 
   ord=order(id.mtch$mtch.row)
   id.mtch=id.mtch[ord,]

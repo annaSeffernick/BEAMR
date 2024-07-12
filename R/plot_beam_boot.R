@@ -18,7 +18,7 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' test.beam.data <- prep_beam_data(main.data=clinf, mtx.data=omicdat,
 #'                                  mtx.anns=omicann, set.data=setdat,
 #'                                  set.anns=NULL, n.boot=10, seed=123)
@@ -73,13 +73,13 @@ plot_beam_boot <- function(beam.result, beam.feat.pvals, beam.specs=NULL,
   }
   names(p.vec) <- p.vec.name
 
-  gen_boot_plot(beam.result, set.id, z=T, max.plots=max.plots, p.vec)
+  gen_boot_plot(beam.result, set.id, z=TRUE, max.plots=max.plots, p.vec)
 }
 
 ###################
 # bootplot function
 
-gen_boot_plot <- function(beam.result, set.id, z=T, max.plots=NULL, p.vec)
+gen_boot_plot <- function(beam.result, set.id, z=TRUE, max.plots=NULL, p.vec)
 {
   B.mtx=extract_beam_stats(beam.result, set.id)
   B.mtx <- t(B.mtx)
@@ -170,7 +170,7 @@ gen_boot_plot <- function(beam.result, set.id, z=T, max.plots=NULL, p.vec)
                           main=set.id,
                           labels=labels.new.sm[max.ind]))
       #mtext(set.id, side=3)
-      #mtext(paste(strwrap(paste(paste0(labels.new.sm[max.ind], "=", labels.new[max.ind]),collapse="; "), width=100), collapse="\n"), side=1, outer=T)
+      #mtext(paste(strwrap(paste(paste0(labels.new.sm[max.ind], "=", labels.new[max.ind]),collapse="; "), width=100), collapse="\n"), side=1, outer=TRUE)
     }
 
   }

@@ -7,7 +7,7 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' test.beam.data <- prep_beam_data(main.data=clinf, mtx.data=omicdat,
 #'                                  mtx.anns=omicann, set.data=setdat,
 #'                                  set.anns=NULL, n.boot=10, seed=123)
@@ -29,16 +29,16 @@ compute_feature_pvalues=function(beam.stats)
     beta=beam.stats$beam.stats[[i]]
     message(paste0("  This matrix has ",nrow(beta)," features."))
     B=rowSums(!is.na(beta))
-    geq0=rowSums(beta[,-1]>=0,na.rm=T)
-    leq0=rowSums(beta[,-1]<=0,na.rm=T)
+    geq0=rowSums(beta[,-1]>=0,na.rm=TRUE)
+    leq0=rowSums(beta[,-1]<=0,na.rm=TRUE)
     p=2*(pmin(geq0,leq0)+1)/(B+1)
     p[p>1]=1
-    pi.hat=min(1,2*mean(p,na.rm=T))
+    pi.hat=min(1,2*mean(p,na.rm=TRUE))
     q=stats::p.adjust(p,"fdr")
     q=pi.hat*q
 
     clean.beta=clean_Bmtx(beta)
-    beta.hat=rowMeans(clean.beta,na.rm=T)
+    beta.hat=rowMeans(clean.beta,na.rm=TRUE)
     pvl.mtx=cbind(beta=beta.hat,p=p,q=q)
     rownames(pvl.mtx)=rownames(beta)
 
@@ -50,7 +50,7 @@ compute_feature_pvalues=function(beam.stats)
 
     ann.pvl=merge(ann.data,pvl.mtx,
                   by.x=ann.id,by.y="row.names",
-                  all=T)
+                  all=TRUE)
 
     pvals[[i]]=ann.pvl
 

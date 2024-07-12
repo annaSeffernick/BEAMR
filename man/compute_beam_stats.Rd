@@ -20,7 +20,7 @@ A beam.stats object, which is a list with beam.stats (the association matrices),
 Compute bootstrap model coefficients for BEAM
 }
 \examples{
-\dontrun{
+\donttest{
 data(clinf)
 data(omicdat)
 data(omicann)

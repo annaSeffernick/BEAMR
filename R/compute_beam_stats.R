@@ -22,7 +22,7 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' data(clinf)
 #' data(omicdat)
 #' data(omicann)
@@ -151,11 +151,11 @@ model_coef=function(x,main.data,mdl,stdize)
 
 {
   res=NA
-  sdx=sd(x,na.rm=T)
+  sdx=sd(x,na.rm=TRUE)
   if (is.na(sdx)) return(0)
   if (sdx==0) return(0)
 
-  mnx=mean(x,na.rm=T)
+  mnx=mean(x,na.rm=TRUE)
   if(stdize){
     main.data$mtx.row=(x-mnx)/sdx
   }
@@ -199,13 +199,13 @@ model_coef=function(x,main.data,mdl,stdize)
 
     # no events
     if (is.null(event)) return(0)
-    if (mean(event,na.rm=T)==0) return(0)
+    if (mean(event,na.rm=TRUE)==0) return(0)
 
     # no variability in event time
-    if ((sd(evtm,na.rm=T)==0)&(mean(event,na.rm=T)==1)) return(0)
+    if ((sd(evtm,na.rm=TRUE)==0)&(mean(event,na.rm=TRUE)==1)) return(0)
 
     # no variability in x
-    if (sd(x.temp,na.rm=T)==0) return(0)
+    if (sd(x.temp,na.rm=TRUE)==0) return(0)
 
     # no variability in x among those with observation times greater than or equal to shortest uncensored event time
     evtm.cns <- cbind.data.frame(evtm, event)
@@ -216,9 +216,9 @@ model_coef=function(x,main.data,mdl,stdize)
     if(sd(x.obs.mog)==0) return(0)
 
     # check for monotone likelihood
-    x.event=range(x.temp[event>0],na.rm=T)
-    x.none=range(x.temp[event==0],na.rm=T)
-    if(sd(x.event,na.rm=T)==0){
+    x.event=range(x.temp[event>0],na.rm=TRUE)
+    x.none=range(x.temp[event==0],na.rm=TRUE)
+    if(sd(x.event,na.rm=TRUE)==0){
       model.fit=try(eval(parse(text=mdl)))
       if(inherits(model.fit, "try-error")){
         return(0) # if x for cases with event has no variability, return 0 if model can't be fit?
@@ -276,7 +276,7 @@ model_coef=function(x,main.data,mdl,stdize)
     x.temp=mdl.frm[,2]
 
     # no variability in x or y after removing NAs
-    sdx=sd(x.temp,na.rm=T)
+    sdx=sd(x.temp,na.rm=TRUE)
     if (sdx==0) res=0
     if(inherits(y.temp, "factor")){
       if(all(duplicated(y.temp))){
@@ -284,7 +284,7 @@ model_coef=function(x,main.data,mdl,stdize)
       }
     }
     else{
-      sdy=sd(y.temp,na.rm=T)
+      sdy=sd(y.temp,na.rm=TRUE)
       if (sdy==0) res=0
     }
 
@@ -306,17 +306,17 @@ model_coef=function(x,main.data,mdl,stdize)
 
     # no events
     if (is.null(event)) return(0)
-    if (mean(event,na.rm=T)==0) return(0)
+    if (mean(event,na.rm=TRUE)==0) return(0)
 
     # no variability in event time
-    if ((sd(evtm,na.rm=T)==0)&(mean(event,na.rm=T)==1)) return(0)
+    if ((sd(evtm,na.rm=TRUE)==0)&(mean(event,na.rm=TRUE)==1)) return(0)
 
     # no variability in x
-    if (sd(x.temp,na.rm=T)==0) return(0)
+    if (sd(x.temp,na.rm=TRUE)==0) return(0)
 
     # check for monotone likelihood
-    x.event=range(x.temp[event>0],na.rm=T)
-    x.none=range(x.temp[event==0],na.rm=T)
+    x.event=range(x.temp[event>0],na.rm=TRUE)
+    x.none=range(x.temp[event==0],na.rm=TRUE)
 
     if (all(x.none>=x.event[2])) return(-Inf) # if x for cases with no event is always less than x for cases with event
     if (all(x.none<=x.event[1])) return(Inf)  #
@@ -331,7 +331,7 @@ model_coef=function(x,main.data,mdl,stdize)
     x.temp=model.fit$model[,model.terms[2]]
 
     # no variability in x or y after removing NAs
-    sdx=sd(x.temp,na.rm=T)
+    sdx=sd(x.temp,na.rm=TRUE)
     if (sdx==0) res=0
     if(inherits(y.temp, "factor")){
       if(all(duplicated(y.temp))){
@@ -339,7 +339,7 @@ model_coef=function(x,main.data,mdl,stdize)
       }
     }
     else{
-      sdy=sd(y.temp,na.rm=T)
+      sdy=sd(y.temp,na.rm=TRUE)
       if (sdy==0) res=0
     }
   }
@@ -368,8 +368,8 @@ get_model_terms=function(model.fit)
 {
   model.terms=deparse(attr(model.fit$terms,"variables"))
   model.terms=unlist(strsplit(model.terms,split=","))
-  model.terms=gsub("list(","",model.terms,fixed=T)
-  model.terms=gsub(")","",model.terms,fixed=T)
+  model.terms=gsub("list(","",model.terms,fixed=TRUE)
+  model.terms=gsub(")","",model.terms,fixed=TRUE)
   model.terms=gsub(" ","",model.terms)
   return(model.terms)
 }
@@ -386,7 +386,7 @@ coxphf2 <- function(formula, data, model=TRUE){
   else{
     model <- NULL
   }
-  fit <- firth.coxph(data=data, form=formula, use.pen=T)
+  fit <- firth.coxph(data=data, form=formula, use.pen=TRUE)
   res <- list(model, fit, fit$par)
   names(res) <- c("model", "fit", "beta")
   class(res) <- "coxphf2"
@@ -472,7 +472,7 @@ nlogL.logistic=function(beta,y,mdl.mtx,firth=FALSE)
 
 # form <- formula
 # dset=data
-# firth=T
+# firth=TRUE
 firth.logistic=function(form,dset,firth=TRUE)
 
 {

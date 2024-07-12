@@ -6,7 +6,7 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' data(clinf)
 #' data(omicdat)
 #' data(omicann)

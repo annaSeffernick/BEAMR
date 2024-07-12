@@ -18,7 +18,7 @@ A data.frame of beam.specs if all conditions satisfied, otherwise throws an erro
 Check that beam.specs satisfies all necessary conditions
 }
 \examples{
-\dontrun{
+\donttest{
 data(clinf)
 data(omicdat)
 data(omicann)

@@ -4,7 +4,13 @@
 \alias{compute_set_pvalues}
 \title{Compute BEAMR p-values for sets}
 \usage{
-compute_set_pvalues(beam.stats, peel = F, z = T, alpha = 0.1, mess.freq = 25)
+compute_set_pvalues(
+  beam.stats,
+  peel = FALSE,
+  z = TRUE,
+  alpha = 0.1,
+  mess.freq = 25
+)
 }
 \arguments{
 \item{beam.stats}{A beam.stats object from compute_beam_stats function}
@@ -24,7 +30,7 @@ A list with a data.frame of set p-values from BEAMR analysis, a data.frame of su
 Compute BEAMR p-values for sets
 }
 \examples{
-\dontrun{
+\donttest{
 test.beam.data <- prep_beam_data(main.data=clinf, mtx.data=omicdat,
                                  mtx.anns=omicann, set.data=setdat,
                                  set.anns=NULL, n.boot=10, seed=123)

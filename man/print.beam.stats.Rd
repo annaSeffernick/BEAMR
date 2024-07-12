@@ -18,7 +18,7 @@ Messages about the beam.data object
 Print summary information about beam.stats object
 }
 \examples{
-\dontrun{
+\donttest{
 data(clinf)
 data(omicdat)
 data(omicann)

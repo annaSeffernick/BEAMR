@@ -49,7 +49,7 @@ prep_beam_plot <- function(beam.data, beam.specs){
       } # if omic type factor
       else{
         # continuous omic - dichotomize at median
-        plot.vec[i] <- paste0("survminer::ggsurvplot(survfit(", temp.ep.name, "~(mtx.row>median(mtx.row, na.rm=T)), data=main.data), data=main.data, legend='right', legend.title='",
+        plot.vec[i] <- paste0("survminer::ggsurvplot(survfit(", temp.ep.name, "~(mtx.row>median(mtx.row, na.rm=TRUE)), data=main.data), data=main.data, legend='right', legend.title='",
                               omic,"', legend.labs=c('High', 'Low'), ylab='",
                               temp.ep.name," Probability', font.x=12, font.y=12)")
       } # else omic type numeric

@@ -24,7 +24,7 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' test.beam.data <- prep_beam_data(main.data=clinf, mtx.data=omicdat,
 #'                                  mtx.anns=omicann, set.data=setdat,
 #'                                  set.anns=NULL, n.boot=10, seed=123)
@@ -220,7 +220,7 @@ filter_feat_qval <- function(beam.stats, feat.pvalues, q.feat.limit){
       stop(paste0("Your q.feat.limit, ", q.feat.limit, ", is smaller than the minimum feature-level q-value, ", min(feat.pvals.df$q), ". Please choose a larger value."))
     feat.pvals.filt <- feat.pvals.df[which(feat.pvals.df$q <= q.feat.limit),]
     row.id.filt <- feat.pvals.filt$id
-    mtx.rows <- set.data[which(set.data$row.id %in% row.id.filt),,drop=F]
+    mtx.rows <- set.data[which(set.data$row.id %in% row.id.filt),,drop=FALSE]
     res <- filter_set_data_rows(beam.stats=beam.stats, set.data.rows=mtx.rows)
   }
   if(q.feat.limit >= 1){
@@ -231,7 +231,7 @@ filter_feat_qval <- function(beam.stats, feat.pvalues, q.feat.limit){
     }
     feat.pvals.ord.filt <- feat.pvals.ord[1:q.feat.limit,]
     row.id.filt <- feat.pvals.ord.filt$id
-    mtx.rows <- set.data[which(set.data$row.id %in% row.id.filt), ,drop=F]
+    mtx.rows <- set.data[which(set.data$row.id %in% row.id.filt), ,drop=FALSE]
     res <- filter_set_data_rows(beam.stats=beam.stats, set.data.rows=mtx.rows)
   }
   return(res)
@@ -259,7 +259,7 @@ filter_feat_pval <- function(beam.stats, feat.pvalues, p.feat.limit){
       stop(paste0("Your p.feat.limit, ", p.feat.limit, ", is smaller than the minimum feature-level p-value, ", min(feat.pvals.df$p), ". Please choose a larger value."))
     feat.pvals.filt <- feat.pvals.df[which(feat.pvals.df$p <= p.feat.limit),]
     row.id.filt <- feat.pvals.filt$id
-    mtx.rows <- set.data[which(set.data$row.id %in% row.id.filt), ,drop=F]
+    mtx.rows <- set.data[which(set.data$row.id %in% row.id.filt), ,drop=FALSE]
     res <- filter_set_data_rows(beam.stats=beam.stats, set.data.rows=mtx.rows)
   }
   if(p.feat.limit >= 1){
@@ -270,7 +270,7 @@ filter_feat_pval <- function(beam.stats, feat.pvalues, p.feat.limit){
     }
     feat.pvals.ord.filt <- feat.pvals.ord[1:p.feat.limit,]
     row.id.filt <- feat.pvals.ord.filt$id
-    mtx.rows <- set.data[which(set.data$row.id %in% row.id.filt), ,drop=F]
+    mtx.rows <- set.data[which(set.data$row.id %in% row.id.filt), ,drop=FALSE]
     res <- filter_set_data_rows(beam.stats=beam.stats, set.data.rows=mtx.rows)
   }
   return(res)
@@ -286,7 +286,7 @@ filter_qval <- function(beam.stats, beam.pvalues, q.limit){
       stop(paste0("Your q.limit, ", q.limit, ", is smaller than the minimum set q-value, ", min(set.pvals$q.set), ". Please choose a larger value."))
     set.pvals.filt <- set.pvals[which(set.pvals$q.set <= q.limit),]
     set.id.filt <- set.pvals.filt$set.id
-    mtx.rows <- set.data[which(set.data$set.id %in% set.id.filt),,drop=F]
+    mtx.rows <- set.data[which(set.data$set.id %in% set.id.filt),,drop=FALSE]
     res <- filter_set_data_rows(beam.stats=beam.stats, set.data.rows=mtx.rows)
   }
   if(q.limit >= 1){
@@ -297,7 +297,7 @@ filter_qval <- function(beam.stats, beam.pvalues, q.limit){
     }
     set.pvals.ord.filt <- set.pvals.ord[1:q.limit,]
     set.id.filt <- set.pvals.ord.filt$set.id
-    mtx.rows <- set.data[which(set.data$set.id %in% set.id.filt),,drop=F]
+    mtx.rows <- set.data[which(set.data$set.id %in% set.id.filt),,drop=FALSE]
     res <- filter_set_data_rows(beam.stats=beam.stats, set.data.rows=mtx.rows)
   }
   if(q.limit < 0)
@@ -315,7 +315,7 @@ filter_pval <- function(beam.stats, beam.pvalues, p.limit){
       stop(paste0("Your p.limit, ", p.limit, ", is smaller than the minimum set p-value, ", min(set.pvals$p.set), ". Please choose a larger value."))
     set.pvals.filt <- set.pvals[which(set.pvals$p.set <= p.limit),]
     set.id.filt <- set.pvals.filt$set.id
-    mtx.rows <- set.data[which(set.data$set.id %in% set.id.filt),,drop=F]
+    mtx.rows <- set.data[which(set.data$set.id %in% set.id.filt),,drop=FALSE]
     res <- filter_set_data_rows(beam.stats=beam.stats, set.data.rows=mtx.rows)
   }
   if(p.limit >= 1){
@@ -326,7 +326,7 @@ filter_pval <- function(beam.stats, beam.pvalues, p.limit){
     }
     set.pvals.ord.filt <- set.pvals.ord[1:p.limit,]
     set.id.filt <- set.pvals.ord.filt$set.id
-    mtx.rows <- set.data[which(set.data$set.id %in% set.id.filt),,drop=F]
+    mtx.rows <- set.data[which(set.data$set.id %in% set.id.filt),,drop=FALSE]
     res <- filter_set_data_rows(beam.stats=beam.stats, set.data.rows=mtx.rows)
   }
   if(p.limit < 0)
@@ -561,7 +561,7 @@ match_anns <- function(mtx.anns, mtx.data){
       n.mtch=rep(NA,n.anns)
       for (j in 1:n.anns)
       {
-        best.mtch=get_id_index(mtx.anns2[[j]],mtx.rows,warn=F)
+        best.mtch=get_id_index(mtx.anns2[[j]],mtx.rows,warn=FALSE)
         n.mtch[j]=sum(!is.na(best.mtch))
       }
       if (any(n.mtch)>0)
