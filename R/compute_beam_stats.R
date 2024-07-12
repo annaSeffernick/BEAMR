@@ -44,11 +44,12 @@ compute_beam_stats=function(beam.data, beam.specs,stdize=TRUE)
 {
   ##############################
   # Check data
-  if(!inherits(beam.data, "beam.data"))
-    stop("beam.data must be the result of prep.beam.data.")
+  if(!inherits(beam.data, "beam.data")){
+    stop("Error: beam.data must be the result of prep.beam.data.")
+  }
 
   #print(beam.data)
-  print(beam.specs)
+  #print(beam.specs)
 
   ##################################
   # check the specs
@@ -59,7 +60,7 @@ compute_beam_stats=function(beam.data, beam.specs,stdize=TRUE)
 
   n.spec=nrow(beam.specs)
   boot.index=beam.data$boot.index
-  print(class(boot.index))
+  #print(class(boot.index))
   main.data=beam.data$main.data
 
   beam.stats=vector("list",n.spec)
@@ -67,13 +68,13 @@ compute_beam_stats=function(beam.data, beam.specs,stdize=TRUE)
   {
     message(paste("Working on analysis",
                   i,"of",n.spec,":",date()))
-    print(beam.specs[i,c("mtx","mdl")])
+    message(beam.specs[i,c("mtx","mdl")])
     mtx.name=beam.specs[i,"mtx"]
     mtx=beam.data$mtx.data[[mtx.name]]
     mdl=beam.specs[i,"mdl"]
     x.clm=paste0(mtx.name,".clm")
 
-    print(boot.index)
+    #print(boot.index)
     beam.stats[[i]]=boot_model_coefs(boot.index,
                                      mtx,
                                      main.data,
@@ -123,9 +124,9 @@ boot_model_coefs=function(boot.index,
     #print(boot.ind)
     boot.data=main.data[boot.ind,]
     x.index=boot.data[,x.clm]
-    print(x.index)
+    #print(x.index)
     boot.X=X[,x.index]
-    print(dim(boot.X))
+    #print(dim(boot.X))
     res[,i]=row_model_coefs(boot.X,boot.data,mdl,stdize)
   }
   return(res)
@@ -349,12 +350,12 @@ model_coef=function(x,main.data,mdl,stdize)
   if(inherits(model.fit, "try-error"))
   {
     #res=0
-    message("Error fitting model, R call shown below:")
-    print(mdl)
-    message("Error fitting model, mtx.row summarized below:")
-    print(summary(main.data$mtx.row))
-    message("Error fitting model, summary of data shown below: ")
-    print(summary(main.data))
+    message("Error fitting model!")
+    # print(mdl)
+    # message("Error fitting model, mtx.row summarized below:")
+    # print(summary(main.data$mtx.row))
+    # message("Error fitting model, summary of data shown below: ")
+    # print(summary(main.data))
   }
 
   return(res)
@@ -404,7 +405,7 @@ firth.neg.logL=function(beta,data,form,use.pen=FALSE)
   #fpen=0.5*log(sum(diag(ginv(cox.res0$var))))
   detail <- try(coxph.detail(cox.res0))
   if(inherits(detail, "try-error")){
-    stop("Unable to calculate Firth penalty!")
+   stop("Unable to calculate Firth penalty!")
   }
   if(inherits(detail$imat, "array")){
     det.list <- lapply(seq(dim(detail$imat)[3]), function(x) detail$imat[ , , x])

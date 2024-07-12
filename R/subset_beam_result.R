@@ -16,7 +16,7 @@
 #' @param intersect A logical value. Default is TRUE. If TRUE, use intersection of all specified criteria. If FALSE use union of all specified criteria.
 #' @param recalc A logical value. Default is FALSE. If TRUE, recalculate p-values. If FALSE use original set p-values..
 #'
-#' @return A list with filtered beam.stats object, updated beam.set.pvals, and filtered beam.feat.pvals.
+#' @returns A list with filtered beam.stats object, updated beam.set.pvals, and filtered beam.feat.pvals.
 #' @importFrom dplyr inner_join
 #' @importFrom dplyr full_join
 #' @importFrom purrr reduce

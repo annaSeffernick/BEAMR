@@ -140,9 +140,9 @@ compute_set_pvalues=function(beam.stats, peel=FALSE, z=TRUE, alpha=0.1, mess.fre
   # set.mtch$stat.row=paste0(set.mtch$stat.id,"_",set.mtch$row.id)
   # smry.mtx=merge(set.mtch,smry.mtx,by.x="stat.row",by.y="rownames",all=TRUE)
 
-  print(head(set.index))
-  print(head(set.stat.index))
-  print(head(set.mtch))
+  #print(head(set.index))
+  #print(head(set.stat.index))
+  #print(head(set.mtch))
 
   ##############################################
   # Extract bootstrap coefs and compute p-value for each set
