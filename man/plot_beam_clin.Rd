@@ -54,25 +54,6 @@ A figure (ggarrange object)
 plot_beam_clin produces a matrix of feature level clinical plots for a set. Users can specify which omic/endpoint pairs they want to see as well as the number of features from the set. Default is all omic/endpoint pairs and the top feature (smallest feature-level p-value).
 }
 \examples{
-\donttest{
-test.beam.data <- prep_beam_data(main.data=clinf, mtx.data=omicdat,
-                                 mtx.anns=omicann, set.data=setdat,
-                                 set.anns=NULL, n.boot=10, seed=123)
-specs <- prep_beam_specs(beam.data=test.beam.data, endpts=c("MRD29", "EFS"),
-                         firth=TRUE)
-test.beam.stats <- compute_beam_stats(beam.data=test.beam.data,
-                                      beam.specs=specs)
-test.pvals <- compute_set_pvalues(beam.stats=test.beam.stats)
-test.feat.pvals <- compute_feature_pvalues(beam.stats=test.beam.stats)
-plot.specs <- prep_beam_plot(beam.data=test.beam.data, beam.specs=specs)
-test.plot <- plot_beam_clin(beam.result=test.beam.stats, beam.specs=plot.specs,
-                            beam.set.pvals=test.pvals,
-                            beam.feat.pvals=test.feat.pvals,
-                            set.id="ENSG00000099810", gene.name="MTAP",
-                            pair.type=NULL, number.pairs=1,
-                             n.col=4, n.row=NULL, title.size=11,
-                            pair.order="omic", endpt.order=NULL)
-}
 data(beam_stats)
 test.pvals <- compute_set_pvalues(beam.stats=beam_stats)
 test.feat.pvals <- compute_feature_pvalues(beam.stats=beam_stats)

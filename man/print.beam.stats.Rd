@@ -18,18 +18,6 @@ Messages about the beam.data object
 Print summary information about beam.stats object
 }
 \examples{
-\donttest{
-data(clinf)
-data(omicdat)
-data(omicann)
-data(setdat)
-test.beam.data <- prep_beam_data(main.data=clinf, mtx.data=omicdat,
-                                 mtx.anns=omicann, set.data=setdat,
-                                 set.anns=NULL, n.boot=10, seed=123)
-specs <- prep_beam_specs(beam.data=test.beam.data, endpts=c("MRD29", "EFS", "OS"))
-test.beam.stats <- compute_beam_stats(beam.data=test.beam.data, beam.specs=specs)
-print(test.beam.stats)
-}
 data(beam_stats)
 print(beam_stats)
 }
