@@ -10,16 +10,6 @@
 #' @examples
 #' data(beam_dat)
 #' print(beam_dat)
-#' \donttest{
-#' data(clinf)
-#' data(omicdat)
-#' data(omicann)
-#' data(setdat)
-#' test.beam.data <- prep_beam_data(main.data=clinf, mtx.data=omicdat,
-#'                                  mtx.anns=omicann, set.data=setdat,
-#'                                  set.anns=NULL, n.boot=10, seed=123)
-#' print(test.beam.data)
-#' }
 print.beam.data=function(x,...)
 
 {

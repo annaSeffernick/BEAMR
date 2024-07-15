@@ -24,20 +24,6 @@
 #' @export
 #'
 #' @examples
-#' \donttest{
-#' test.beam.data <- prep_beam_data(main.data=clinf, mtx.data=omicdat,
-#'                                  mtx.anns=omicann, set.data=setdat,
-#'                                  set.anns=NULL, n.boot=10, seed=123)
-#' specs <- prep_beam_specs(beam.data=test.beam.data, endpts=c("MRD29", "EFS", "OS"),
-#'                          firth=TRUE)
-#' test.beam.stats <- compute_beam_stats(beam.data=test.beam.data, beam.specs=specs)
-#' test.pvals <- compute_set_pvalues(beam.stats=test.beam.stats)
-#' test.feat.pvals <- compute_feature_pvalues(beam.stats=test.beam.stats)
-#' filt.beam.stats <- subset_beam_result(test.beam.stats, test.pvals,
-#'                                       test.feat.pvals, endpts=c("EFS", "OS"),
-#'                                       q.limit=10, intersect=TRUE,
-#'                                       recalc=FALSE)
-#' }
 #' data(beam_stats)
 #' test.pvals <- compute_set_pvalues(beam.stats=beam_stats)
 #' test.feat.pvals <- compute_feature_pvalues(beam.stats=beam_stats)

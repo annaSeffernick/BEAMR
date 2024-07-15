@@ -18,18 +18,6 @@ A data.frame of beam.specs if all conditions satisfied, otherwise throws an erro
 Check that beam.specs satisfies all necessary conditions
 }
 \examples{
-\donttest{
-data(clinf)
-data(omicdat)
-data(omicann)
-data(setdat)
-data(specs)
-test.beam.data <- prep_beam_data(main.data=clinf, mtx.data=omicdat,
-                                 mtx.anns=omicann, set.data=setdat,
-                                 set.anns=NULL, n.boot=100, seed=123)
-test.specs <- check_beam_specs(specs, names(test.beam.data$mtx.data))
-}
-
 data(beam_dat)
 data(beam_specs)
 test_specs <- check_beam_specs(beam_specs, names(beam_dat$mtx.data))

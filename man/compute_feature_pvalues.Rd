@@ -16,16 +16,6 @@ A list of feature level p-values, with each entry a data frame for a different o
 Compute feature level p-values from BEAM statistics
 }
 \examples{
-\donttest{
-test.beam.data <- prep_beam_data(main.data=clinf, mtx.data=omicdat,
-                                 mtx.anns=omicann, set.data=setdat,
-                                 set.anns=NULL, n.boot=10, seed=123)
-specs <- prep_beam_specs(beam.data=test.beam.data, endpts=c("MRD29", "EFS"),
-                         firth=TRUE)
-test.beam.stats <- compute_beam_stats(beam.data=test.beam.data,
-                                      beam.specs=specs)
-test.feat.pvals <- compute_feature_pvalues(beam.stats=test.beam.stats)
-}
 data(beam_stats)
 test.feat.pvals <- compute_feature_pvalues(beam.stats=beam_stats)
 }

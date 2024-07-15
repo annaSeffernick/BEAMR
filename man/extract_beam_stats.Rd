@@ -18,16 +18,6 @@ A matrix with with estimated associations for each endpoint and each omic featur
 Extract beam stats for a specific set
 }
 \examples{
-\donttest{
-test.beam.data <- prep_beam_data(main.data=clinf, mtx.data=omicdat,
-                                 mtx.anns=omicann, set.data=setdat,
-                                 set.anns=NULL, n.boot=10, seed=123)
-specs <- prep_beam_specs(beam.data=test.beam.data, endpts=c("MRD29", "EFS"),
-                         firth=TRUE)
-test.beam.stats <- compute_beam_stats(beam.data=test.beam.data,
-                                      beam.specs=specs)
-test.stats <- extract_beam_stats(test.beam.stats, set.id="ENSG00000099810")
-}
 data(beam_stats)
 test.stats <- extract_beam_stats(beam_stats, set.id="ENSG00000099810")
 }

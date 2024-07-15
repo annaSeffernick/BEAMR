@@ -7,18 +7,6 @@
 #' @export
 #'
 #' @examples
-#' \donttest{
-#' data(clinf)
-#' data(omicdat)
-#' data(omicann)
-#' data(setdat)
-#' test.beam.data <- prep_beam_data(main.data=clinf, mtx.data=omicdat,
-#'                                  mtx.anns=omicann, set.data=setdat,
-#'                                  set.anns=NULL, n.boot=10, seed=123)
-#' specs <- prep_beam_specs(beam.data=test.beam.data, endpts=c("MRD29", "EFS", "OS"))
-#' test.beam.stats <- compute_beam_stats(beam.data=test.beam.data, beam.specs=specs)
-#' print(test.beam.stats)
-#' }
 #' data(beam_stats)
 #' print(beam_stats)
 print.beam.stats <- function(x,...)
@@ -42,12 +30,12 @@ print.beam.stats <- function(x,...)
   for(i in 1:length(splt)){
     cat(paste0("\nExample Association Estimate Matrix for ", splt[[i]][1], " with ",
                splt[[i]][2],": \n"))
-    print(beam.stats$beam.stats[[i]][1:5,1:5])
+    print(beam.stats$beam.stats[[i]][1:min(nrow(beam.stats$beam.stats[[i]]), 5),1:min(ncol(beam.stats$beam.stats[[i]]), 5)])
   }
 
   cat(paste0("\nExample Endpoint Data: \n"))
   un.eps <- unique(splt.df$Endpoints)
-  print(beam.stats$beam.data$main.data[1:5,which(colnames(beam.stats$beam.data$main.data) %in% un.eps)])
+  print(beam.stats$beam.data$main.data[1:min(nrow(beam.stats$beam.data$main.data), 5),which(colnames(beam.stats$beam.data$main.data) %in% un.eps)])
 
   cat(paste0("\nBEAM Model Specifications: \n"))
   print(beam.stats$beam.specs)

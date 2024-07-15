@@ -42,23 +42,6 @@ A list of plots for the specified set and/or feature.
 Internal function: generate a list of clinical feature plots.
 }
 \examples{
-\donttest{
-test.beam.data <- prep_beam_data(main.data=clinf, mtx.data=omicdat,
-                                 mtx.anns=omicann, set.data=setdat,
-                                 set.anns=NULL, n.boot=10, seed=123)
-specs <- prep_beam_specs(beam.data=test.beam.data, endpts=c("MRD29", "EFS"),
-                         firth=TRUE)
-test.beam.stats <- compute_beam_stats(beam.data=test.beam.data,
-                                      beam.specs=specs)
-test.feat.pvals <- compute_feature_pvalues(beam.stats=test.beam.stats)
-plot.specs <- prep_beam_plot(beam.data=test.beam.data, beam.specs=specs)
-plot.list <- gen_beam_plot_list(beam.result=test.beam.stats,
-                                beam.specs=plot.specs,
-                                beam.feat.pvals=test.feat.pvals,
-                                number.pairs=1, set.id="ENSG00000099810",
-                                feat.id=NULL, title.size=11,
-                                pair.order="omic", endpt.order=NULL)
-}
 data(beam_stats)
 test.feat.pvals <- compute_feature_pvalues(beam.stats=beam_stats)
 plot.specs <- prep_beam_plot(beam.data=beam_stats$beam.data,

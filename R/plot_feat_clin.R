@@ -18,22 +18,6 @@
 #' @export
 #'
 #' @examples
-#' \donttest{
-#' test.beam.data <- prep_beam_data(main.data=clinf, mtx.data=omicdat,
-#'                                  mtx.anns=omicann, set.data=setdat,
-#'                                  set.anns=NULL, n.boot=10, seed=123)
-#' specs <- prep_beam_specs(beam.data=test.beam.data, endpts=c("MRD29", "EFS"),
-#'                          firth=TRUE)
-#' test.beam.stats <- compute_beam_stats(beam.data=test.beam.data, beam.specs=specs)
-#' test.pvals <- compute_set_pvalues(beam.stats=test.beam.stats)
-#' test.feat.pvals <- compute_feature_pvalues(beam.stats=test.beam.stats)
-#' plot.specs <- prep_beam_plot(beam.data=test.beam.data, beam.specs=specs)
-#' test.plot <- plot_feat_clin(beam.result=test.beam.stats, beam.specs=plot.specs,
-#'                             beam.set.pvals=test.pvals,
-#'                             beam.feat.pvals=test.feat.pvals,
-#'                             feat.id="ENSG00000227443_loss",
-#'                             n.col=2, n.row=NULL)
-#' }
 #' data(beam_stats)
 #' test.pvals <- compute_set_pvalues(beam.stats=beam_stats)
 #' test.feat.pvals <- compute_feature_pvalues(beam.stats=beam_stats)
