@@ -124,193 +124,193 @@
 <span class="r-in"><span><span class="va">test.beam.data</span> <span class="op">&lt;-</span> <span class="fu"><a href="prep_beam_data.html">prep_beam_data</a></span><span class="op">(</span>main.data<span class="op">=</span><span class="va">clinf</span>, mtx.data<span class="op">=</span><span class="va">omicdat</span>,</span></span>
 <span class="r-in"><span>                                 mtx.anns<span class="op">=</span><span class="va">omicann</span>, set.data<span class="op">=</span><span class="va">setdat</span>,</span></span>
 <span class="r-in"><span>                                 set.anns<span class="op">=</span><span class="cn">NULL</span>, n.boot<span class="op">=</span><span class="fl">10</span>, seed<span class="op">=</span><span class="fl">123</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Checking inputs: Fri Jul 12 18:42:02 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Checking that each element of mtx.data is a matrix: Fri Jul 12 18:42:02 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Checking that each element of mtx.anns is a data.frame: Fri Jul 12 18:42:02 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Aligning main.data with each mtx.data: Fri Jul 12 18:42:02 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on mtx.data Lesion (1 of 2): Fri Jul 12 18:42:02 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on mtx.data RNA (2 of 2): Fri Jul 12 18:42:02 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Checking inputs: Mon Jul 15 13:29:17 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Checking that each element of mtx.data is a matrix: Mon Jul 15 13:29:17 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Checking that each element of mtx.anns is a data.frame: Mon Jul 15 13:29:17 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Aligning main.data with each mtx.data: Mon Jul 15 13:29:17 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on mtx.data Lesion (1 of 2): Mon Jul 15 13:29:17 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on mtx.data RNA (2 of 2): Mon Jul 15 13:29:17 2024</span>
 <span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Some ids not matched; returning NAs for those.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on mtx.anns: Fri Jul 12 18:42:02 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Matching matrix 1 with annotations: Fri Jul 12 18:42:02 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Matching matrix 2 with annotations: Fri Jul 12 18:42:02 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Checking set.data: Fri Jul 12 18:42:02 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>     Ordering and indexing set.data: Fri Jul 12 18:42:02 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>     Checking section 1 of 40 of set.data: Fri Jul 12 18:42:02 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Generating bootstrap index matrix: Fri Jul 12 18:42:02 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Packaging and returning result: Fri Jul 12 18:42:02 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on mtx.anns: Mon Jul 15 13:29:17 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Matching matrix 1 with annotations: Mon Jul 15 13:29:17 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Matching matrix 2 with annotations: Mon Jul 15 13:29:17 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Checking set.data: Mon Jul 15 13:29:17 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>     Ordering and indexing set.data: Mon Jul 15 13:29:17 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>     Checking section 1 of 40 of set.data: Mon Jul 15 13:29:17 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Generating bootstrap index matrix: Mon Jul 15 13:29:17 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Packaging and returning result: Mon Jul 15 13:29:17 2024</span>
 <span class="r-in"><span><span class="va">specs</span> <span class="op">&lt;-</span> <span class="fu"><a href="prep_beam_specs.html">prep_beam_specs</a></span><span class="op">(</span>beam.data<span class="op">=</span><span class="va">test.beam.data</span>, endpts<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"MRD29"</span>, <span class="st">"EFS"</span>, <span class="st">"OS"</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>                         firth<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> MRD29 is continuous, fitting lm</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> EFS is survival endpoint, fitting coxphf2</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> OS is survival endpoint, fitting coxphf2</span>
 <span class="r-in"><span><span class="va">test.beam.stats</span> <span class="op">&lt;-</span> <span class="fu"><a href="compute_beam_stats.html">compute_beam_stats</a></span><span class="op">(</span>beam.data<span class="op">=</span><span class="va">test.beam.data</span>, beam.specs<span class="op">=</span><span class="va">specs</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Working on analysis 1 of 6 : Fri Jul 12 18:42:02 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Working on analysis 1 of 6 : Mon Jul 15 13:29:17 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Lesionlm(MRD29~mtx.row,data=main.data,model=T)</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on bootstrap 0 of 11 : Fri Jul 12 18:42:02 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on bootstrap 10 of 11 : Fri Jul 12 18:42:02 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Working on analysis 2 of 6 : Fri Jul 12 18:42:02 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on bootstrap 0 of 11 : Mon Jul 15 13:29:17 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on bootstrap 10 of 11 : Mon Jul 15 13:29:17 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Working on analysis 2 of 6 : Mon Jul 15 13:29:17 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> RNAlm(MRD29~mtx.row,data=main.data,model=T)</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on bootstrap 0 of 11 : Fri Jul 12 18:42:02 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on bootstrap 10 of 11 : Fri Jul 12 18:42:02 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Working on analysis 3 of 6 : Fri Jul 12 18:42:02 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on bootstrap 0 of 11 : Mon Jul 15 13:29:17 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on bootstrap 10 of 11 : Mon Jul 15 13:29:17 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Working on analysis 3 of 6 : Mon Jul 15 13:29:17 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Lesioncoxphf2(EFS~mtx.row,data=main.data,model=T)</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on bootstrap 0 of 11 : Fri Jul 12 18:42:02 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on bootstrap 10 of 11 : Fri Jul 12 18:42:17 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Working on analysis 4 of 6 : Fri Jul 12 18:42:19 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on bootstrap 0 of 11 : Mon Jul 15 13:29:17 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on bootstrap 10 of 11 : Mon Jul 15 13:29:32 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Working on analysis 4 of 6 : Mon Jul 15 13:29:34 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> RNAcoxphf2(EFS~mtx.row,data=main.data,model=T)</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on bootstrap 0 of 11 : Fri Jul 12 18:42:19 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on bootstrap 10 of 11 : Fri Jul 12 18:42:37 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Working on analysis 5 of 6 : Fri Jul 12 18:42:39 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on bootstrap 0 of 11 : Mon Jul 15 13:29:34 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on bootstrap 10 of 11 : Mon Jul 15 13:29:51 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Working on analysis 5 of 6 : Mon Jul 15 13:29:53 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Lesioncoxphf2(OS~mtx.row,data=main.data,model=T)</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on bootstrap 0 of 11 : Fri Jul 12 18:42:39 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on bootstrap 10 of 11 : Fri Jul 12 18:42:54 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Working on analysis 6 of 6 : Fri Jul 12 18:42:55 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on bootstrap 0 of 11 : Mon Jul 15 13:29:53 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on bootstrap 10 of 11 : Mon Jul 15 13:30:08 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Working on analysis 6 of 6 : Mon Jul 15 13:30:09 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> RNAcoxphf2(OS~mtx.row,data=main.data,model=T)</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on bootstrap 0 of 11 : Fri Jul 12 18:42:55 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on bootstrap 10 of 11 : Fri Jul 12 18:43:12 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on bootstrap 0 of 11 : Mon Jul 15 13:30:09 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on bootstrap 10 of 11 : Mon Jul 15 13:30:26 2024</span>
 <span class="r-in"><span><span class="va">test.pvals</span> <span class="op">&lt;-</span> <span class="fu"><a href="compute_set_pvalues.html">compute_set_pvalues</a></span><span class="op">(</span>beam.stats<span class="op">=</span><span class="va">test.beam.stats</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Preparing bootstrap results for calculating feature set p-values: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Finding stats for each data matrix:Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Finding stats for data matrix Lesion: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>    Finding features with with Lesion.MRD29 stats: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>    Finding features with with Lesion.EFS stats: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>    Finding features with with Lesion.OS stats: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Finding stats for data matrix RNA: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>    Finding features with with RNA.MRD29 stats: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>    Finding features with with RNA.EFS stats: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>    Finding features with with RNA.OS stats: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Found 120 rows of stats: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Merging stats with feature-sets: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Preparing bootstrap results for calculating feature set p-values: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Finding stats for each data matrix:Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Finding stats for data matrix Lesion: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>    Finding features with with Lesion.MRD29 stats: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>    Finding features with with Lesion.EFS stats: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>    Finding features with with Lesion.OS stats: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Finding stats for data matrix RNA: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>    Finding features with with RNA.MRD29 stats: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>    Finding features with with RNA.EFS stats: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>    Finding features with with RNA.OS stats: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Found 120 rows of stats: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Merging stats with feature-sets: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Merged feature-set stat rows: 120</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Ordering and indexing feature sets: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Cleaning up beam.stat matrices:Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>    Working on matrix 1 of 6: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>    Working on matrix 2 of 6: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>    Working on matrix 3 of 6: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>    Working on matrix 4 of 6: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>    Working on matrix 5 of 6: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>    Working on matrix 6 of 6: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing p-value for feature set 1 of 34: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Ordering and indexing feature sets: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Cleaning up beam.stat matrices:Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>    Working on matrix 1 of 6: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>    Working on matrix 2 of 6: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>    Working on matrix 3 of 6: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>    Working on matrix 4 of 6: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>    Working on matrix 5 of 6: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>    Working on matrix 6 of 6: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing p-value for feature set 1 of 34: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> 13ENSG00000081760</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing p-value for feature set 26 of 34: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing p-value for feature set 26 of 34: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> 9496ENSG00000229835</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Finished computing p-values at: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Finished computing p-values at: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Minimum q-value is 0.106439437831269</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Creating set p-value data frame.</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Done creating data frame.</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Creating list for output.</span>
 <span class="r-in"><span><span class="va">test.feat.pvals</span> <span class="op">&lt;-</span> <span class="fu"><a href="compute_feature_pvalues.html">compute_feature_pvalues</a></span><span class="op">(</span>beam.stats<span class="op">=</span><span class="va">test.beam.stats</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 1 of 6: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 1 of 6: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   This matrix has 20 features.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 2 of 6: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 2 of 6: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   This matrix has 20 features.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 3 of 6: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 3 of 6: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   This matrix has 20 features.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 4 of 6: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 4 of 6: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   This matrix has 20 features.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 5 of 6: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 5 of 6: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   This matrix has 20 features.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 6 of 6: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 6 of 6: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   This matrix has 20 features.</span>
 <span class="r-in"><span><span class="va">filt.beam.stats</span> <span class="op">&lt;-</span> <span class="fu">subset_beam_result</span><span class="op">(</span><span class="va">test.beam.stats</span>, <span class="va">test.pvals</span>,</span></span>
 <span class="r-in"><span>                                      <span class="va">test.feat.pvals</span>, endpts<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"EFS"</span>, <span class="st">"OS"</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>                                      q.limit<span class="op">=</span><span class="fl">10</span>, intersect<span class="op">=</span><span class="cn">TRUE</span>,</span></span>
 <span class="r-in"><span>                                      recalc<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on mtx.anns: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Matching matrix 1 with annotations: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Matching matrix 2 with annotations: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on mtx.anns: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Matching matrix 1 with annotations: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Matching matrix 2 with annotations: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(set.id, mtx.id, row.id)`</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on mtx.anns: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Matching matrix 1 with annotations: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Matching matrix 2 with annotations: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 1 of 4: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on mtx.anns: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Matching matrix 1 with annotations: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Matching matrix 2 with annotations: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 1 of 4: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   This matrix has 6 features.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 2 of 4: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 2 of 4: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   This matrix has 7 features.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 3 of 4: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 3 of 4: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   This matrix has 6 features.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 4 of 4: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 4 of 4: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   This matrix has 7 features.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 1 of 4: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 1 of 4: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   This matrix has 6 features.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 2 of 4: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 2 of 4: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   This matrix has 7 features.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 3 of 4: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 3 of 4: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   This matrix has 6 features.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 4 of 4: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 4 of 4: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   This matrix has 7 features.</span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">beam_stats</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">test.pvals</span> <span class="op">&lt;-</span> <span class="fu"><a href="compute_set_pvalues.html">compute_set_pvalues</a></span><span class="op">(</span>beam.stats<span class="op">=</span><span class="va">beam_stats</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Preparing bootstrap results for calculating feature set p-values: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Finding stats for each data matrix:Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Finding stats for data matrix Lesion: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>    Finding features with with Lesion.MRD29 stats: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>    Finding features with with Lesion.EFS stats: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>    Finding features with with Lesion.OS stats: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Finding stats for data matrix RNA: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>    Finding features with with RNA.MRD29 stats: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>    Finding features with with RNA.EFS stats: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>    Finding features with with RNA.OS stats: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Found 120 rows of stats: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Merging stats with feature-sets: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Preparing bootstrap results for calculating feature set p-values: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Finding stats for each data matrix:Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Finding stats for data matrix Lesion: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>    Finding features with with Lesion.MRD29 stats: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>    Finding features with with Lesion.EFS stats: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>    Finding features with with Lesion.OS stats: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Finding stats for data matrix RNA: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>    Finding features with with RNA.MRD29 stats: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>    Finding features with with RNA.EFS stats: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>    Finding features with with RNA.OS stats: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Found 120 rows of stats: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Merging stats with feature-sets: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Merged feature-set stat rows: 120</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Ordering and indexing feature sets: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Cleaning up beam.stat matrices:Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>    Working on matrix 1 of 6: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>    Working on matrix 2 of 6: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>    Working on matrix 3 of 6: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>    Working on matrix 4 of 6: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>    Working on matrix 5 of 6: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>    Working on matrix 6 of 6: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing p-value for feature set 1 of 34: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Ordering and indexing feature sets: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Cleaning up beam.stat matrices:Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>    Working on matrix 1 of 6: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>    Working on matrix 2 of 6: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>    Working on matrix 3 of 6: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>    Working on matrix 4 of 6: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>    Working on matrix 5 of 6: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>    Working on matrix 6 of 6: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing p-value for feature set 1 of 34: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> 13ENSG00000081760</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing p-value for feature set 26 of 34: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing p-value for feature set 26 of 34: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> 9496ENSG00000229835</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Finished computing p-values at: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Finished computing p-values at: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Minimum q-value is 0.106439437831269</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Creating set p-value data frame.</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Done creating data frame.</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Creating list for output.</span>
 <span class="r-in"><span><span class="va">test.feat.pvals</span> <span class="op">&lt;-</span> <span class="fu"><a href="compute_feature_pvalues.html">compute_feature_pvalues</a></span><span class="op">(</span>beam.stats<span class="op">=</span><span class="va">beam_stats</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 1 of 6: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 1 of 6: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   This matrix has 20 features.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 2 of 6: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 2 of 6: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   This matrix has 20 features.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 3 of 6: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 3 of 6: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   This matrix has 20 features.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 4 of 6: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 4 of 6: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   This matrix has 20 features.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 5 of 6: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 5 of 6: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   This matrix has 20 features.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 6 of 6: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 6 of 6: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   This matrix has 20 features.</span>
 <span class="r-in"><span><span class="va">filt.beam.stats</span> <span class="op">&lt;-</span> <span class="fu">subset_beam_result</span><span class="op">(</span><span class="va">beam_stats</span>, <span class="va">test.pvals</span>, <span class="va">test.feat.pvals</span>,</span></span>
 <span class="r-in"><span>                                      endpts<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"EFS"</span>,<span class="st">"OS"</span><span class="op">)</span>, q.limit<span class="op">=</span><span class="fl">10</span>, intersect<span class="op">=</span><span class="cn">TRUE</span>,</span></span>
 <span class="r-in"><span>                                      recalc<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on mtx.anns: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Matching matrix 1 with annotations: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Matching matrix 2 with annotations: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on mtx.anns: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Matching matrix 1 with annotations: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Matching matrix 2 with annotations: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Joining with `by = join_by(set.id, mtx.id, row.id)`</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on mtx.anns: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Matching matrix 1 with annotations: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Matching matrix 2 with annotations: Fri Jul 12 18:43:14 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 1 of 4: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on mtx.anns: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Matching matrix 1 with annotations: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Matching matrix 2 with annotations: Mon Jul 15 13:30:27 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 1 of 4: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   This matrix has 6 features.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 2 of 4: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 2 of 4: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   This matrix has 7 features.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 3 of 4: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 3 of 4: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   This matrix has 6 features.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 4 of 4: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 4 of 4: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   This matrix has 7 features.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 1 of 4: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 1 of 4: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   This matrix has 6 features.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 2 of 4: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 2 of 4: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   This matrix has 7 features.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 3 of 4: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 3 of 4: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   This matrix has 6 features.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 4 of 4: Fri Jul 12 18:43:14 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing feature p-values for stat matrix 4 of 4: Mon Jul 15 13:30:27 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   This matrix has 7 features.</span>
 </code></pre></div>
     </div>

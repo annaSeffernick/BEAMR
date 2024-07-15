@@ -62,50 +62,7 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
-<span class="r-in"><span><span class="va">test.beam.data</span> <span class="op">&lt;-</span> <span class="fu"><a href="prep_beam_data.html">prep_beam_data</a></span><span class="op">(</span>main.data<span class="op">=</span><span class="va">clinf</span>, mtx.data<span class="op">=</span><span class="va">omicdat</span>,</span></span>
-<span class="r-in"><span>                                 mtx.anns<span class="op">=</span><span class="va">omicann</span>, set.data<span class="op">=</span><span class="va">setdat</span>,</span></span>
-<span class="r-in"><span>                                 set.anns<span class="op">=</span><span class="cn">NULL</span>, n.boot<span class="op">=</span><span class="fl">10</span>, seed<span class="op">=</span><span class="fl">123</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Checking inputs: Fri Jul 12 18:37:42 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Checking that each element of mtx.data is a matrix: Fri Jul 12 18:37:42 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Checking that each element of mtx.anns is a data.frame: Fri Jul 12 18:37:42 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Aligning main.data with each mtx.data: Fri Jul 12 18:37:42 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on mtx.data Lesion (1 of 2): Fri Jul 12 18:37:42 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on mtx.data RNA (2 of 2): Fri Jul 12 18:37:42 2024</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Some ids not matched; returning NAs for those.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on mtx.anns: Fri Jul 12 18:37:42 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Matching matrix 1 with annotations: Fri Jul 12 18:37:42 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Matching matrix 2 with annotations: Fri Jul 12 18:37:42 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Checking set.data: Fri Jul 12 18:37:42 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>     Ordering and indexing set.data: Fri Jul 12 18:37:42 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>     Checking section 1 of 40 of set.data: Fri Jul 12 18:37:42 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Generating bootstrap index matrix: Fri Jul 12 18:37:42 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Packaging and returning result: Fri Jul 12 18:37:42 2024</span>
-<span class="r-in"><span><span class="va">specs</span> <span class="op">&lt;-</span> <span class="fu"><a href="prep_beam_specs.html">prep_beam_specs</a></span><span class="op">(</span>beam.data<span class="op">=</span><span class="va">test.beam.data</span>, endpts<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"MRD29"</span>, <span class="st">"EFS"</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>                         firth<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> MRD29 is continuous, fitting lm</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> EFS is survival endpoint, fitting coxphf2</span>
-<span class="r-in"><span><span class="va">test.beam.stats</span> <span class="op">&lt;-</span> <span class="fu"><a href="compute_beam_stats.html">compute_beam_stats</a></span><span class="op">(</span>beam.data<span class="op">=</span><span class="va">test.beam.data</span>,</span></span>
-<span class="r-in"><span>                                      beam.specs<span class="op">=</span><span class="va">specs</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Working on analysis 1 of 4 : Fri Jul 12 18:37:42 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Lesionlm(MRD29~mtx.row,data=main.data,model=T)</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on bootstrap 0 of 11 : Fri Jul 12 18:37:42 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on bootstrap 10 of 11 : Fri Jul 12 18:37:42 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Working on analysis 2 of 4 : Fri Jul 12 18:37:42 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> RNAlm(MRD29~mtx.row,data=main.data,model=T)</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on bootstrap 0 of 11 : Fri Jul 12 18:37:42 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on bootstrap 10 of 11 : Fri Jul 12 18:37:42 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Working on analysis 3 of 4 : Fri Jul 12 18:37:42 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Lesioncoxphf2(EFS~mtx.row,data=main.data,model=T)</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on bootstrap 0 of 11 : Fri Jul 12 18:37:42 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on bootstrap 10 of 11 : Fri Jul 12 18:37:57 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Working on analysis 4 of 4 : Fri Jul 12 18:37:59 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> RNAcoxphf2(EFS~mtx.row,data=main.data,model=T)</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on bootstrap 0 of 11 : Fri Jul 12 18:37:59 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Working on bootstrap 10 of 11 : Fri Jul 12 18:38:16 2024</span>
-<span class="r-in"><span><span class="va">test.stats</span> <span class="op">&lt;-</span> <span class="fu">extract_beam_stats</span><span class="op">(</span><span class="va">test.beam.stats</span>, set.id<span class="op">=</span><span class="st">"ENSG00000099810"</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="co"># }</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">beam_stats</span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">beam_stats</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">test.stats</span> <span class="op">&lt;-</span> <span class="fu">extract_beam_stats</span><span class="op">(</span><span class="va">beam_stats</span>, set.id<span class="op">=</span><span class="st">"ENSG00000099810"</span><span class="op">)</span></span></span>
 </code></pre></div>
     </div>
