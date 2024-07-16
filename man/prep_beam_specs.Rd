@@ -24,7 +24,7 @@ prep_beam_specs(
 \item{endptmdl}{Optional model specification data.frame with endpoint name column called "endpt" and model string column called "mdl"}
 }
 \value{
-beam.specs, a data.frame specifying the omics-endpoint association models to be fit
+The beam.specs object, a data.frame specifying the omics-endpoint association models to be fit
 }
 \description{
 Prepare the beam.specs data.frame for BEAM model fitting. Specifies the univariate models needed to compute the BEAMR set p-values.

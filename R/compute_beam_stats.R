@@ -4,7 +4,7 @@
 #' @param beam.specs A data.frame of strings with columns name, mtx, mdl (string with R model with mtx.row)
 #' @param stdize Logical whether to standardize (center and scale) predictors or not. Default is TRUE.
 #'
-#' @return A beam.stats object, which is a list with beam.stats (the association matrices), the beam.specs, and the beam.data
+#' @returns A beam.stats object, which is a list with beam.stats (the association matrices), the beam.specs, and the beam.data
 #' @importFrom stats coef
 #' @importFrom stats sd
 #' @importFrom stats lm

@@ -3,7 +3,7 @@
 #' @param set.data A data frame with set definition data.
 #' @param sep Punctuation to split on.
 #'
-#' @return A data frame.
+#' @returns A data frame.
 #' @export
 #'
 #' @examples

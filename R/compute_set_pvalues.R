@@ -6,7 +6,7 @@
 #' @param alpha Maximum depth to peel (reduces computing time); default 0.1.
 #' @param mess.freq Message frequency; default 25.
 #'
-#' @return A list with a data.frame of set p-values from BEAMR analysis, a data.frame of summary row p-values, and a data frame of set matching.
+#' @returns A list with a data.frame of set p-values from BEAMR analysis, a data.frame of summary row p-values, and a data frame of set matching.
 #' @importFrom stats prcomp
 #' @importFrom stats p.adjust
 #' @importFrom stats predict

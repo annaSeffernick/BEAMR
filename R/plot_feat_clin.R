@@ -11,7 +11,7 @@
 #' @param n.row A numeric. Specify the number of rows for the plot layout; default NULL will automatically define the number of rows after number of columns specified.
 #' @param n.col A numeric. Specify the number of columns for the plot layout; default NULL will use the number of omics types.
 #'
-#' @return A figure (ggarrange object)
+#' @returns A figure (ggarrange object)
 #' @importFrom ggpubr ggarrange
 #' @importFrom ggpubr annotate_figure
 #' @importFrom ggpubr text_grob

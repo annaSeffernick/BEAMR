@@ -12,7 +12,7 @@
 #' @param feat.id Default NULL; a character with feature name; must be in beam.result$beam.data$set.data$row.id
 #' @param title.size A numeric. Specify the size of individual plot titles. Default is 10.
 #'
-#' @return A list of plots for the specified set and/or feature.
+#' @returns A list of plots for the specified set and/or feature.
 #' @import ggplot2
 #' @import survival
 #' @import survminer

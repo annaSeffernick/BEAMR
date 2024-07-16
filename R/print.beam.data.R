@@ -3,7 +3,7 @@
 #' @param x An object of class "beam.data"
 #' @param ... Other arguments passed to or from other methods
 #'
-#' @return Messages about the beam.data object
+#' @returns Messages about the beam.data object
 #' @importFrom utils head
 #' @export
 #'

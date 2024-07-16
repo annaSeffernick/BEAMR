@@ -10,7 +10,7 @@
 #' @param z Logical indicating whether to z-scale each vector of one coefficient estimate across bootstraps before plotting. Default is TRUE.
 
 #'
-#' @return A pairs plot figure.
+#' @returns A pairs plot figure.
 #' @importFrom stats prcomp
 #' @importFrom stats predict
 #' @importFrom graphics pairs

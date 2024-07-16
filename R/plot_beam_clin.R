@@ -16,7 +16,7 @@
 #' @param n.row A numeric. Specify the number of rows for the plot layout; default NULL will automatically define the number of rows after number of columns specified.
 #' @param title.size A numeric. Specify the size of individual plot titles. Default is 10.
 #'
-#' @return A figure (ggarrange object)
+#' @returns A figure (ggarrange object)
 #' @importFrom ggpubr ggarrange
 #' @importFrom ggpubr annotate_figure
 #' @importFrom ggpubr text_grob

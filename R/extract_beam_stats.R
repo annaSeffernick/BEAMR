@@ -3,7 +3,7 @@
 #' @param beam.stats A beam.stats object, which is a list with beam.stats (the association matrices), the beam.specs, and the beam.data
 #' @param set.id A character of a set id name (an entry in in beam.data$set.data$set.id)
 #'
-#' @return A matrix with with estimated associations for each endpoint and each omic feature linked to the set
+#' @returns A matrix with with estimated associations for each endpoint and each omic feature linked to the set
 #' @export
 #'
 #' @examples

@@ -5,7 +5,7 @@
 #' @param beam.data Result of prep.beam.data
 #' @param beam.specs A data.frame of strings with columns name, mtx, mdl (string with R model with mtx.row)
 #'
-#' @return An updated beam.specs object that includes the column "plot"
+#' @returns An updated beam.specs object that includes the column "plot"
 #' @export
 #'
 #' @examples

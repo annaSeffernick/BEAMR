@@ -3,7 +3,7 @@
 #' @param mtch.data A data.frame
 #' @param ids A vector of row ids to match
 #'
-#' @return A vector of column names with the most matches.
+#' @returns A vector of column names with the most matches.
 #' @export
 #'
 #' @examples

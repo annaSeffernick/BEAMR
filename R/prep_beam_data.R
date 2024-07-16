@@ -8,7 +8,7 @@
 #' @param n.boot Number of bootstraps
 #' @param seed Initial seed for random number generation
 #'
-#' @return A beam.data object, which is a list with main.data, mtx.data, mtx.anns, anns.mtch, set.data, set.anns, and boot.index
+#' @returns A beam.data object, which is a list with main.data, mtx.data, mtx.anns, anns.mtch, set.data, set.anns, and boot.index
 #' @export
 #'
 #' @examples

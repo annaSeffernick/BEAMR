@@ -3,7 +3,7 @@
 #' @param list.object A list used in BEAMR analysis
 #' @param required.class Class for list elements, e.g. matrix
 #'
-#' @return Logical TRUE if list is of required class
+#' @returns Logical TRUE if list is of required class
 #' @export
 #'
 #' @examples

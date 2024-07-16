@@ -2,7 +2,7 @@
 #'
 #' @param beam.stats A beam.stats object, which is a list with beam.stats (the association matrices), the beam.specs, and the beam.data
 #'
-#' @return A list of feature level p-values, with each entry a data frame for a different omics/endpoint associaiton, with columns id, gene, beta, p, q
+#' @returns A list of feature level p-values, with each entry a data frame for a different omics/endpoint associaiton, with columns id, gene, beta, p, q
 #' @importFrom stats p.adjust
 #' @export
 #'

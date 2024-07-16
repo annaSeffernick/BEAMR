@@ -3,7 +3,7 @@
 #' @param beam.specs A data.frame with column name, mtx, and mdl
 #' @param mtx.names A vector with the names of the data matrices (beam.data$mtx.data)
 #'
-#' @return A data.frame of beam.specs if all conditions satisfied, otherwise throws an error
+#' @returns A data.frame of beam.specs if all conditions satisfied, otherwise throws an error
 #' @export
 #'
 #' @examples

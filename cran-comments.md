@@ -6,9 +6,11 @@ This is a resubmission. In this version I have:
 
 * Modified the DESCRIPTION file to note a manuscript describing the method will be submitted soon.
 
-* Replaced \dontrun with \donttest for examples that take more than 5s to run.
+* Removed the examples in \dontrun that take more than 5s to run, and kept only the short examples.
 
 * Replaced "T" and "F" with "TRUE and "FALSE". 
+
+* Removed unnecessary print() statements in compute_beam_stats.R and compute_set_pvalues.R
 
 ## R CMD check results
 

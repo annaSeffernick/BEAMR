@@ -4,7 +4,7 @@
 #' @param ids A vector of ids to be linked in mtch.data
 #' @param warn A logical value whether to include warnings with results
 #'
-#' @return A data.frame with matching id index
+#' @returns A data.frame with matching id index
 #' @export
 #'
 #' @examples

@@ -2,7 +2,7 @@
 #'
 #' @param B Matrix of bootstrap coefficients
 #'
-#' @return Matrix of cleaned bootstrap coefficients
+#' @returns Matrix of cleaned bootstrap coefficients
 #' @export
 #'
 #' @examples

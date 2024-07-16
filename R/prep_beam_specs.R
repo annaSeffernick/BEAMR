@@ -8,7 +8,7 @@
 #' @param adjvars Default NULL, optional vector of adjustment variable names in main.data
 #' @param endptmdl Optional model specification data.frame with endpoint name column called "endpt" and model string column called "mdl"
 #'
-#' @return beam.specs, a data.frame specifying the omics-endpoint association models to be fit
+#' @returns The beam.specs object, a data.frame specifying the omics-endpoint association models to be fit
 #' @import logistf
 #' @export
 #'
