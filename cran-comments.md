@@ -12,6 +12,8 @@ This is a resubmission. In this version I have:
 
 * Removed unnecessary print() statements in compute_beam_stats.R and compute_set_pvalues.R
 
+* The print() statements were kept in the plot_* functions as these are meant to print plots to the screen.
+
 ## R CMD check results
 
 0 errors | 0 warnings | 0 notes
