@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">BEAMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.1.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.1.0.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,7 +30,7 @@
   <main id="main" class="col-md-9"><div class="page-header">
 
       <h1>Compute BEAMR p-values for sets</h1>
-      <small class="dont-index">Source: <a href="https://github.com/annaSeffernick/BEAMR/blob/v1.1.0/R/compute_set_pvalues.R" class="external-link"><code>R/compute_set_pvalues.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/annaSeffernick/BEAMR/blob/main/R/compute_set_pvalues.R" class="external-link"><code>R/compute_set_pvalues.R</code></a></small>
       <div class="d-none name"><code>compute_set_pvalues.Rd</code></div>
     </div>
 
@@ -82,24 +82,24 @@
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">beam_stats_sm</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">test.pvals</span> <span class="op">&lt;-</span> <span class="fu">compute_set_pvalues</span><span class="op">(</span>beam.stats<span class="op">=</span><span class="va">beam_stats_sm</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Preparing bootstrap results for calculating feature set p-values: Tue Jul 30 13:46:03 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Finding stats for each data matrix:Tue Jul 30 13:46:03 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Finding stats for data matrix Lesion: Tue Jul 30 13:46:03 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>    Finding features with with Lesion.MRD29 stats: Tue Jul 30 13:46:03 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Finding stats for data matrix RNA: Tue Jul 30 13:46:03 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>    Finding features with with RNA.MRD29 stats: Tue Jul 30 13:46:03 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Found 40 rows of stats: Tue Jul 30 13:46:03 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Merging stats with feature-sets: Tue Jul 30 13:46:03 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Preparing bootstrap results for calculating feature set p-values: Tue Jul 30 13:51:19 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Finding stats for each data matrix:Tue Jul 30 13:51:19 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Finding stats for data matrix Lesion: Tue Jul 30 13:51:19 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>    Finding features with with Lesion.MRD29 stats: Tue Jul 30 13:51:19 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Finding stats for data matrix RNA: Tue Jul 30 13:51:19 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>    Finding features with with RNA.MRD29 stats: Tue Jul 30 13:51:19 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Found 40 rows of stats: Tue Jul 30 13:51:19 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Merging stats with feature-sets: Tue Jul 30 13:51:19 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Merged feature-set stat rows: 40</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Ordering and indexing feature sets: Tue Jul 30 13:46:03 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   Cleaning up beam.stat matrices:Tue Jul 30 13:46:03 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>    Working on matrix 1 of 2: Tue Jul 30 13:46:03 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>    Working on matrix 2 of 2: Tue Jul 30 13:46:03 2024</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing p-value for feature set 1 of 34: Tue Jul 30 13:46:03 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Ordering and indexing feature sets: Tue Jul 30 13:51:19 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>   Cleaning up beam.stat matrices:Tue Jul 30 13:51:19 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>    Working on matrix 1 of 2: Tue Jul 30 13:51:19 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>    Working on matrix 2 of 2: Tue Jul 30 13:51:19 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing p-value for feature set 1 of 34: Tue Jul 30 13:51:19 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> 11ENSG00000081760</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing p-value for feature set 26 of 34: Tue Jul 30 13:46:03 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Computing p-value for feature set 26 of 34: Tue Jul 30 13:51:19 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> 3232ENSG00000229835</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Finished computing p-values at: Tue Jul 30 13:46:03 2024</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Finished computing p-values at: Tue Jul 30 13:51:19 2024</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Minimum q-value is 0.0608278029898599</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Creating set p-value data frame.</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Done creating data frame.</span>
